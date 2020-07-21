@@ -17,6 +17,7 @@ class PostController extends Controller
     public function index()
     {
         $posts = Post::latest()->paginate(500);
+
         return view('posts.all', compact('posts'));
     }
 
@@ -107,7 +108,65 @@ class PostController extends Controller
      */
     public function update(Request $request, Post $post)
     {
-        //
+     
+      /*   $request->validate([
+            'title' => 'required',
+            'body' => 'required',
+            'photos' => 'required',
+            'photos.*' => 'mimes:jpg,png,jpeg'
+        ],
+        [
+            'title.required' => 'Unesite naslov objave',
+            'body.required' => 'Unesite sadrŽaj objave',
+            'photos.required' => 'Unesite slike',
+            'photos.mimes' => 'Moguće ekstenzije slike su: jpg, png i jpeg'
+        ]);
+ */
+ /*    $post= Post::update($request->all()); */
+  
+    for($i=0; $i<count($post->images); $i++) {
+
+        if($request->hasfile('photos'.$i))
+        {        
+            $im = Image::find($request->{"imgid".$i});
+
+            if($im) {
+                if($im->id == $request->{"imgid".$i}) {
+
+                    $name = round(microtime(true) * 1000).'.'.$request->file('photos'.$i)->extension();
+                    $request->file('photos'.$i)->move(public_path().'/photos/', $name);  
+    
+    
+                    DB::table('images')
+                    ->where('id', $im->id)
+                    ->update(
+                        ['name' => $name
+                       ]
+                    );
+                }
+            }
+            
+          /*  foreach($request->file('photos') as $file)
+           {
+               $name = round(microtime(true) * 1000).'.'.$file->extension();
+               $file->move(public_path().'/photos/', $name);  
+               $data[] = $name;  
+               
+               $image= new Image();
+               $image->name=json_encode($data);
+               DB::table('images')
+                   ->insert(
+                       ['name' => $name,
+                       'post_id' =>  $post->id]
+                   );
+           } */
+        
+        }
+    }
+    
+
+
+        return back()->with('success','Objava je uspjeŠno kreirana!');
     }
 
     /**
