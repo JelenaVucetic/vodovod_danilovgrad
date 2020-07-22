@@ -889,49 +889,9 @@ select:-webkit-autofill:focus {
  * # buttons 
  *
  * ------------------------------------------------------------------- */
-.btn, 
-button, 
-input[type="submit"], 
-input[type="reset"], 
-input[type="button"] {
-    display: inline-block;
-    font-family: "Open Sans", sans-serif;
-    font-weight: 700;
-    font-size: 1.264rem;
-    text-transform: uppercase;
-    letter-spacing: .5rem;
-    height: 6rem;
-    line-height: 5.6rem;
-    padding: 0 3.2rem;
-    margin: 0 .4rem 1.6rem 0;
-    color: #000000;
-    text-decoration: none;
-    text-align: center;
-    white-space: nowrap;
-    cursor: pointer;
-    -webkit-transition: all .3s;
-    transition: all .3s;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    border-radius: 4px;
-    background-color: #d3d3d3;
-    border: 0.2rem solid #d3d3d3;
-}
 
-.btn:hover, 
-button:hover, 
-input[type="submit"]:hover, 
-input[type="reset"]:hover, 
-input[type="button"]:hover, 
-.btn:focus, button:focus, 
-input[type="submit"]:focus, 
-input[type="reset"]:focus, 
-input[type="button"]:focus {
-    background-color: #000000;
-    border-color: #000000;
-    color: #ffffff;
-    outline: 0;
-}
+
+
 
 /* button primary
  * ------------------------------------------------- */

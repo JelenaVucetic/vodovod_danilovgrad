@@ -8,7 +8,6 @@
 @endif
 @if (count($errors) > 0)
 <div class="alert alert-danger">
-    <strong>Sorry!</strong> There were more problems with your HTML input.<br><br>
     <ul>
       @foreach ($errors->all() as $error)
           <li>{{ $error }}</li>
@@ -24,12 +23,16 @@
             <div class="form-group" style="display: flex;flex-direction: column;">
                 <label class="col-sm-2 col-sm-2 control-label">Naslov</label>
                 <div class="col-sm-10">
-                    <input type="text" class="form-control" name="title" required>
+                <input type="text" class="form-control" name="title" required value="{{old('title')}}">
                 </div>
             </div>
+            <div class="form-group input-group control-group col-sm-10" style="padding: 15px;" >
+                <label class="col-sm-2 col-sm-2 control-label" style="padding-left: 0px;">Dodajte naslovnu fotografiju</label>
+                <input type="file" name="cover_image" class="form-control" required  >
+            </div> 
             <div class="form-group input-group control-group increment col-sm-10" style="padding: 15px;" >
-                <label class="col-sm-2 col-sm-2 control-label" style="padding-left: 0px;">Dodajte slike</label>
-                <input type="file" name="photos[]" class="form-control" multiple required >
+                <label class="col-sm-2 col-sm-2 control-label" style="padding-left: 0px;">Dodajte fotografije</label>
+                <input type="file" name="photos[]" class="form-control" multiple     >
                 {{-- <div class="input-group-btn" style="vertical-align: bottom;"> 
                   <button class="btn btn-success" type="button" style="background: #4ECDC4;border-color: #4ECDC4;" ><i class="glyphicon glyphicon-plus" ></i>Dodaj</button>
                 </div> --}}
@@ -46,7 +49,7 @@
               </div>   
             <div class="form-group col-sm-10" style="margin: 30px 0">
                 <label class="col-sm-2 col-sm-2 control-label" style="padding-left: 0px;">Opis</label>
-                <textarea class="form-control" name="body" id="" rows="5" required></textarea>
+                <textarea class="form-control" name="body" id="" rows="5" required> {{old('body')}}</textarea>
                 <div class="validate"></div>
             </div>
             <div class="form-group col-sm-10">

@@ -1,0 +1,226 @@
+.header {
+    background: rgb(255,255,255);
+    background: linear-gradient(150deg, rgba(255,255,255,1) 50%, rgba(0,0,254,1) 50%, rgba(0,0,254,1) 100%);
+}
+
+.header-content{
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+    margin: auto;
+}
+
+.header-left {
+    display: flex;
+    align-items: baseline;
+    width: 30%;
+    justify-content: space-around;
+}
+
+.header-left a {
+    color: #707070;
+    text-decoration: none;
+}
+
+.header-left a:hover {
+    color: #464545;
+}
+
+.header-left img {
+    width: 70px;
+}
+
+.header-right {
+    display: flex;
+    justify-content: space-between;
+    width: 35%;
+}
+
+.header-right div {
+    display: flex;
+    align-items: center;
+}
+
+.header-right div p {
+    color: white;
+    padding-top: 10px;
+    padding-left: 5px;
+}
+
+.hero {
+    height: 92vh;
+    /* Location of the image */
+  background-image: url('/images/Cover-slika-1.png');
+  
+  /* Background image is centered vertically and horizontally at all times */
+  background-position: center center;
+  
+  /* Background image doesn't tile */
+  background-repeat: no-repeat;
+  
+  /* Background image is fixed in the viewport so that it doesn't move when 
+     the content's height is greater than the image's height */
+  background-attachment: fixed;
+  
+  /* This is what makes the background image rescale based
+     on the container's size */
+  background-size: cover;
+  
+  /* Set a background color that will be displayed
+     while the background image is loading */
+  background-color: #464646;
+}
+
+
+.hero-content {
+   display: flex;
+   width: 30%;
+   position: absolute;
+   top: 50%;
+   left: 10%;
+}
+
+.hero-left {
+    background:  transparent linear-gradient(90deg, #1E7CF8 0%, #4D6D9700 100%) 0% 0% no-repeat padding-box;
+    width: 70%;
+    position: relative;
+    margin: -10px 0;
+}
+
+.hero-left h2 {
+    color: white;
+    position: absolute;
+    right: 20px;
+    font-weight: 600;
+}
+
+.hero-left h3 {
+    color: white;
+    font-weight: 0 !important;
+    position: absolute;
+    top: 40px;
+    right: 20px;
+}
+
+.hero img {
+    width: 70px;
+}
+
+.post-left {
+    width: 80%;
+}
+
+.post-content {
+    display: flex;
+}
+
+.post-bottom {
+    display: flex;
+    width: 90%;
+    justify-content: space-between;
+    margin-left: auto;
+    margin-right: 40px;
+}
+
+.post-bottom button {
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    border: 1px solid #0000FE;
+    border-radius: 3px;
+    padding: 5px;
+    color:  #0000FE;
+    width: 126px;
+}
+
+.post-right {
+    width: 250px;
+    object-fit: cover;
+}
+
+.post-right img {
+   margin-top: 30px;    
+}
+
+.post-title {
+    width: 80%;
+}
+
+.post-title h2 {
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 20px
+}
+
+.post-body {
+    width: 95%;
+}
+
+.post-body span {
+    margin: 20px;
+    color: #A2A2A2;
+}
+
+.post-body p {
+    margin: 15px 0;
+}
+
+.arrow {
+    width: 0; 
+    height: 0; 
+    border-top: 10px solid transparent;
+    border-right: 10px solid transparent;
+    
+    border-bottom: 10px solid #0000FE;
+  }
+  
+
+.history {
+    width: 100%;
+    background: #F3F3F3;
+    margin: 50px 0;
+}
+
+.history h1 {
+    font-size: 30px;
+    font-weight: 700;
+    margin: 30px 0px;
+}
+
+.histroy-content {
+    display: flex;   
+}
+
+.histroy-content p {
+    color:#4A4A4A;
+}
+
+.history-left {
+    width: 80%;
+    padding-right: 20px;
+}
+
+.history-right img {
+    width: 200px;
+}
+
+.image-title {
+    position: relative;
+}
+
+.image-title span {
+    position: absolute;
+    right: 4%;
+}
+
+.history-button {
+    margin: 30px;
+}
+
+.history-button button {
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    border: 1px solid #0000FE;
+    border-radius: 3px;
+    padding: 5px;
+    color:  #0000FE;
+    width: 126px;
+}
+

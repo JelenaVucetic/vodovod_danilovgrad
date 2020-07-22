@@ -1,4 +1,38 @@
-<header class="s-header">
+<header class="header">
+    <div class="header-content">
+        <div class="header-left">
+            <div>
+                <img src="/images/VIK-DG-Logo-Color.png" alt="">
+            </div>
+            <div>
+                <a href="">Naslovna</a>
+            </div>
+            <div>
+                <a href="">O nama</a>
+            </div>
+            <div>
+                <a href="">Kontakt informacije</a>
+            </div>
+        </div>
+        <div class="header-right">
+            <div>
+               <img src="/images/iconfinder_phone_216352.svg" alt="">
+               <p>020 / 811 - 550</p>
+            </div>
+            <div>
+                <img src="/images/Page-1.svg" alt="">
+                <p>vik@danilovgrad.me</p>
+            </div>
+            <div>
+                <img src="/images/search_1_.svg" alt="">
+            </div>
+        </div>
+    </div>
+   
+</header>
+
+
+{{-- <header class="s-header">
 
     <div class="row">
 
@@ -72,4 +106,4 @@
 
     <a class="header-menu-toggle" href="#0" title="Menu"><span>Menu</span></a>
 
-</header>
+</header> --}}
