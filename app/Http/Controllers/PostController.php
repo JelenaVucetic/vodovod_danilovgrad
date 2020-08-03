@@ -38,7 +38,7 @@ class PostController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function store(Request $request)
-    { 
+    {
         $request->validate([
             'title' => 'required',
             'body' => 'required',
@@ -56,13 +56,14 @@ class PostController extends Controller
             'cover_image.max' => 'Maksimalna veličina slike je 2048MB'
         ]);
 
-        $imageName = time().'.'.$request->cover_image->extension();  
+        $imageName = time().'.'.$request->cover_image->extension();
         $request->cover_image->move(public_path().'/photos/', $imageName);
-      
+
         $post= Post::create([
             'title' => $request->title,
             'body' => $request->body,
-            'cover_image' => $imageName
+            'cover_image' => $imageName,
+            'category_id' => $request->category_id
         ]);
 
     if($request->hasfile('photos'))
@@ -70,9 +71,9 @@ class PostController extends Controller
         foreach($request->file('photos') as $file)
         {
             $name = round(microtime(true) * 1000).'.'.$file->extension();
-            $file->move(public_path().'/photos/', $name);  
-            $data[] = $name;  
-            
+            $file->move(public_path().'/photos/', $name);
+            $data[] = $name;
+
             $image= new Image();
             $image->name=json_encode($data);
             DB::table('images')
@@ -81,7 +82,7 @@ class PostController extends Controller
                     'post_id' =>  $post->id]
                 );
         }
-     
+
      }
 
 
@@ -96,7 +97,10 @@ class PostController extends Controller
      */
     public function show(Post $post)
     {
-        //
+        $post = Post::findOrFail($post->id);
+        $posts = Post::orderBy('created_at', 'desc')->where('id', '!=', $post->id)->get();
+
+        return view("posts.show", compact('post', 'posts'));
     }
 
     /**
@@ -119,7 +123,7 @@ class PostController extends Controller
      */
     public function update(Request $request, Post $post)
     {
-     
+
       /*   $request->validate([
             'title' => 'required',
             'body' => 'required',
@@ -134,20 +138,20 @@ class PostController extends Controller
         ]);
  */
  /*    $post= Post::update($request->all()); */
-  
+
     for($i=0; $i<count($post->images); $i++) {
 
         if($request->hasfile('photos'.$i))
-        {        
+        {
             $im = Image::find($request->{"imgid".$i});
 
             if($im) {
                 if($im->id == $request->{"imgid".$i}) {
 
                     $name = round(microtime(true) * 1000).'.'.$request->file('photos'.$i)->extension();
-                    $request->file('photos'.$i)->move(public_path().'/photos/', $name);  
-    
-    
+                    $request->file('photos'.$i)->move(public_path().'/photos/', $name);
+
+
                     DB::table('images')
                     ->where('id', $im->id)
                     ->update(
@@ -156,13 +160,13 @@ class PostController extends Controller
                     );
                 }
             }
-            
+
           /*  foreach($request->file('photos') as $file)
            {
                $name = round(microtime(true) * 1000).'.'.$file->extension();
-               $file->move(public_path().'/photos/', $name);  
-               $data[] = $name;  
-               
+               $file->move(public_path().'/photos/', $name);
+               $data[] = $name;
+
                $image= new Image();
                $image->name=json_encode($data);
                DB::table('images')
@@ -171,10 +175,10 @@ class PostController extends Controller
                        'post_id' =>  $post->id]
                    );
            } */
-        
+
         }
     }
-    
+
 
 
         return back()->with('success','Objava je uspjeŠno kreirana!');

@@ -1,43 +1,44 @@
 @extends('layouts.master')
 
 @section('content')
-
-    <!-- Hero
-    ================================================== -->
-    @include('layouts.hero')
-    <!-- Hero End -->
-
-    
     <div class="container">
-        <h1 style="color:#1D1D1D;text-align:center;font-size: 30px;font-weight: 700;">KORISNIČKE INFORMACIJE</h1>
+       <div class="single-post">
+            <h1>{{ $post->title }}</h1>
+           <div>
+               <img src="/photos/{{$post->cover_image}}" alt="">
+           </div>
+           <div>
+               <p>{{$post->body}}</p>
+           </div>
+       </div>
         @foreach ($posts as $post)
-        <div class="row" style="margin-bottom: 20px; border-bottom: 1px solid #0000FE;">
-            <div class="post-content">
-                <div class="post-left">
-                    <div class="post-title">
-                        <h2>{{$post->title}}</h2>
-                    </div>
-                    <div class="post-body">
-                        <span>{{$post->created_at->format('d.m.Y.')}}</span> <br>
-                        <p>{{$post->body}}</p>
-                    </div>
-                    <div class="post-bottom">
-                        <div>
-                            <button> <a href="">Pogledaj detaljnije</a> </button>
+            <div class="row" style="margin-bottom: 20px; border-bottom: 1px solid #0000FE;">
+                <div class="post-content">
+                    <div class="post-left">
+                        <div class="post-title">
+                            <h2>{{$post->title}}</h2>
                         </div>
-                        <div>
-                            <img src="/images/iconfinder_social-02_3146790.png" alt="" style="width: 25px;">
-                            <img src="/images/iconfinder_social-02_3146790.png" alt=""  style="width: 25px;">
-                            <img src="/images/iconfinder_social-02_3146790.png" alt=""  style="width: 25px;">
+                        <div class="post-body">
+                            <span>{{$post->created_at->format('d.m.Y.')}}</span> <br>
+                            <p>{{$post->body}}</p>
                         </div>
+                        <div class="post-bottom">
+                            <div>
+                                <button> <a href="">Pogledaj detaljnije</a> </button>
+                            </div>
+                            <div>
+                                <img src="/images/iconfinder_social-02_3146790.png" alt="" style="width: 25px;">
+                                <img src="/images/iconfinder_social-02_3146790.png" alt=""  style="width: 25px;">
+                                <img src="/images/iconfinder_social-02_3146790.png" alt=""  style="width: 25px;">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="post-right">
+                        <img src="/photos/{{$post->cover_image}}" alt="">
                     </div>
                 </div>
-                <div class="post-right">
-                    <img src="/photos/{{$post->cover_image}}" alt="">
-                </div>
+                <div class="arrow"></div>
             </div>
-            <div class="arrow"></div>
-        </div>
         @endforeach
     </div>
     <div class="history">

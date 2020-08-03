@@ -57,11 +57,6 @@
     <!-- Header End -->
 
 
-    <!-- Hero
-    ================================================== -->
-    @include('layouts.hero')
-    <!-- Hero End -->
-
     <!-- Content
     ================================================== -->
     <div class="s-content">
@@ -79,9 +74,9 @@
 
     <!-- Java Script
     ================================================== -->
-    <script src="js/jquery-3.2.1.min.js"></script>
+    <script src="/js/jquery-3.2.1.min.js"></script>
     <script src="/admin/lib/bootstrap/js/bootstrap.min.js"></script>
-    <script src="js/main.js"></script>
+    <script src="/js/main.js"></script>
 
 </body>
 
