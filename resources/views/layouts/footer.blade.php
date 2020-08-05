@@ -2,13 +2,18 @@
     <div class="container">
         <div class="footer-content">
             <div class="footer-left">
-                <h3>DOKUMENTACIJA</h3>
-                <a href="">Procedure</a> 
-                <a href="">Obrasci</a>
-                <a href="">Projekti</a>
-                <a href="">Rješenja i akti</a>
-                <a href="">Programi i planovi rada</a>
-                <a href="">Javne nabavke</a>
+                <div>
+                    <h3>DOKUMENTACIJA</h3>
+                    <a href="">Procedure</a>
+                    <a href="">Obrasci</a>
+                    <a href="">Projekti</a>
+                    <a href="">Rješenja i akti</a>
+                    <a href="">Programi i planovi rada</a>
+                    <a href="">Javne nabavke</a>
+                </div>
+               <div class="footer-logo">
+                   <img src="/images/VIK-DG-Logo White.png" alt="">
+               </div>
             </div>
             <div class="footer-middle">
                 <h3>Informacije</h3>
@@ -38,8 +43,8 @@
                <a href="">Privredna komora Crne Gore</a>
                <a href="">PPOV</a>
             </div>
-        </div>   
-        
+        </div>
+
     </div>
     <div class="footer-bottom">
         <div class="container">
@@ -51,7 +56,7 @@
                     <p>Made by QQRIQ</p>
                 </div>
             </div>
-            
+
         </div>
     </div>
 </footer>

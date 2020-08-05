@@ -7,28 +7,37 @@
     @include('layouts.hero')
     <!-- Hero End -->
 
-    
     <div class="container">
-        <h1 style="color:#1D1D1D;text-align:center;font-size: 30px;font-weight: 700;">KORISNIČKE INFORMACIJE</h1>
+        <h1 class="index-title">KORISNIČKE INFORMACIJE</h1>
         @foreach ($posts as $post)
-        <div class="row" style="margin-bottom: 20px; border-bottom: 1px solid #0000FE;">
+        @php
+            $count = 1;
+        @endphp
+        <div class="row post-row" id="row{{$count}}">
             <div class="post-content">
                 <div class="post-left">
                     <div class="post-title">
                         <h2>{{$post->title}}</h2>
                     </div>
                     <div class="post-body">
-                        <span>{{$post->created_at->format('d.m.Y.')}}</span> <br>
+                        <div class="post-meta">
+                            <span>{{$post->created_at->format('d.m.Y.')}}</span> <br>
+                            <div class="social-phone">
+                                <img src="/images/iconfindersocial.png" alt="" style="width: 25px;">
+                                <img src="/images/iconfinder.svg" alt=""  style="width: 25px;">
+                                <img src="/images/Component.svg" alt=""  style="width: 25px;">
+                            </div>
+                        </div>
                         <p>{{$post->body}}</p>
                     </div>
                     <div class="post-bottom">
                         <div>
-                            <button> <a href="">Pogledaj detaljnije</a> </button>
+                            <button> <a href="/posts/{{$post->id}}">Pogledaj detaljnije</a> </button>
                         </div>
-                        <div>
-                            <img src="/images/iconfinder_social-02_3146790.png" alt="" style="width: 25px;">
-                            <img src="/images/iconfinder_social-02_3146790.png" alt=""  style="width: 25px;">
-                            <img src="/images/iconfinder_social-02_3146790.png" alt=""  style="width: 25px;">
+                        <div class="social-desctop">
+                            <img src="/images/iconfindersocial.png" alt="" style="width: 25px;">
+                            <img src="/images/iconfinder.svg" alt=""  style="width: 25px;">
+                            <img src="/images/Component.svg" alt=""  style="width: 25px;">
                         </div>
                     </div>
                 </div>
@@ -39,6 +48,13 @@
             <div class="arrow"></div>
         </div>
         @endforeach
+        <div style="width:100%; text-align: center">
+            <svg id="more-arrows">
+                <polygon class="arrow-top" points="37.6,27.9 1.8,1.3 3.3,0 37.6,25.3 71.9,0 73.7,1.3 "/>
+                <polygon class="arrow-middle" points="37.6,45.8 0.8,18.7 4.4,16.4 37.6,41.2 71.2,16.4 74.5,18.7 "/>
+                <polygon class="arrow-bottom" points="37.6,64 0,36.1 5.1,32.8 37.6,56.8 70.4,32.8 75.5,36.1 "/>
+            </svg>
+        </div>
     </div>
     <div class="history">
         <div class="container">
@@ -74,9 +90,49 @@
                 <span>Gligorij Antonovič Zaharin</span>
             </div>
             <div class="history-button">
-                <button> <a href="">Pročitaj više</a> </button>
+                <button> <a href="/about">Pročitaj više</a> </button>
             </div>
         </div>
-
+    </div>
+    <div class="history-phone">
+        <div class="container">
+            <h1>ISTORIJAT NASTANKA DANILOVGRADSKOG VODOVODNOG SISTEMA</h1>
+            <div class="histroy-content">
+                <div class="">
+                    <p>
+                        Danilovgradski vodovodni sistem, posle cetinjskog, je najstariji vodovodni sistem u Crnoj Gori.
+                        Da bi se stanovništvu Danilovgrada i okolnih sela obezbijedili što povoljniji životni uslovi,
+                        početkom poslednje decenije devetnaestog vijeka odlučeno je da se u varoš dovede pitka voda sa
+                        Slatinskih izvora. Za izradu Projekta vodovoda, angažovan je inženjer Marko Đukanović.
+                        Knjaz Nikola je 1896.god. u Moskvi prisustvovao krunisanju ruskog cara Nikolaja II Romanova,
+                        i tom prilikom poznati ljekar i profesor medicinskog fakulteta u Moskvi,
+                    </p>
+                    <div class="" style="text-align:center">
+                        <img src="/images/Image 1.png" alt="">
+                        <div class="image-title">
+                            <span>Gligorij Antonovič Zaharin</span>
+                        </div>
+                    </div>
+                    <p style="margin-top: 15px;">
+                        Gligorij Antonovič – Zaharin,
+                        poklonio je Knjazu Nikoli 45.000 zlatnih rubalja za izgradnju vodovoda za Cetinje i Danilovgrad.
+                        Čelične cijevi za vodovod kupljene su u Austrougarskoj, parabrodom dovezene u Kotor, odakle su ih
+                        mještani, na svojim ramenima, donijeli do Danilovgrada. Kopanje kanala za cjevovode, kao i za sve
+                        druge građevinske radove, obavljali su mještani „kulukom“ (obaveznim radom koji se ne plaća).
+                        I tako je voda iz prve danilovgradske česme potekla na Petrov dan davne 1897.god., sa slatinskog
+                        izvorišta „Bistiga“. <br> <br> Nakon toga nastavljeno je širenje vodovodne mreže, pa se sada stanovnici
+                        Danilovgrada snabdijevaju pitkom vodom sa 7 izvorišta: „Oraška jama“, „Milojevića vrelo“,
+                        „Viško vrelo“, „Brajovića jama“, „Žarića jama“, „Slatinski izvori“ i „Mareza“. Danilovgradski
+                        vodovodni sistem takođe je jedan od najkompleksnijih vodovodnih sistema u Crnoj Gori,
+                        zbog razuđenosti teritorije na kojoj se vrše usluge vodosnabdijevanja.
+                        Dužina vodovodne mreže iznosi oko 700km, i njome je pokriveno oko 85% stanovništva
+                        opštine Danilovgrad, dok rezervoarski prostor iznosi 1.845m³.
+                    </p>
+                </div>
+            </div>
+            <div class="history-button">
+                <button> <a href="/about">Pročitaj više</a> </button>
+            </div>
+        </div>
     </div>
 @endsection

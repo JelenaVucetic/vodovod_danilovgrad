@@ -3,13 +3,13 @@ footer {
 }
 
 .footer-left,
-.footer-middle, 
+.footer-middle,
 .footer-right {
     width: 33.3%;
 }
 
 .footer-left h3,
-.footer-middle h3, 
+.footer-middle h3,
 .footer-right h3{
     font-size: 18px;
     color: white;
@@ -66,4 +66,33 @@ footer {
     color: #FFFFFF;
     width: 100%;
     margin: 5px 0;
+}
+
+.footer-logo {
+    display: none;
+}
+
+@media only screen and (max-width: 798px) {
+
+    .footer-content {
+        flex-direction: column;
+    }
+    .footer-left, .footer-middle, .footer-right {
+        width: 100%;
+    }
+
+    .footer-logo {
+        display: block;
+    }
+
+    .footer-left {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .footer-left img {
+        width: 120px;
+        margin-top: 20px;
+    }
+
 }

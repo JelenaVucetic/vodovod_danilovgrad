@@ -10,4 +10,8 @@ class PagesController extends Controller
         $posts = Post::orderBy('created_at', 'desc')->get();
         return view('pages.index', compact('posts'));
     }
+
+    public function about() {
+        return view('pages.about');
+    }
 }

@@ -16,8 +16,8 @@ class PostController extends Controller
      */
     public function index()
     {
-        $posts = Post::latest()->paginate(500);
-
+        $posts = Post::orderBy('created_at','DESC')->offset(0)->limit(3)->get();
+        dd($posts);
         return view('posts.all', compact('posts'));
     }
 
@@ -197,4 +197,6 @@ class PostController extends Controller
 
         return back()->with('success', 'Gost je uspješno obrisan!');
     }
+
+
 }
