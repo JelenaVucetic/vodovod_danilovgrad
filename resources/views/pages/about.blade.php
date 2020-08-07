@@ -1,10 +1,14 @@
 @extends('layouts.master')
 
 @section('content')
-        <div class="container about">
-            <h1 class="about-title">ISTORIJAT NASTANKA DANILOVGRADSKOG VODOVODNOG SISTEMA</h1>
+<link rel="stylesheet" href="/css/about.css">
+
+        <div class="about">
+            <div class="arrowBack"><a href="/"><img src="/images/backArrow.svg" alt=""></a></div>
+
+            <h2 class="about-title">ISTORIJAT NASTANKA DANILOVGRADSKOG VODOVODNOG SISTEMA</h2>
             <div class="histroy-content">
-                <div class="history-left">
+                <div class="history-left textLeft">
                     <p>
                         Danilovgradski vodovodni sistem, posle cetinjskog, je najstariji vodovodni sistem u Crnoj Gori.
                         Da bi se stanovništvu Danilovgrada i okolnih sela obezbijedili što povoljniji životni uslovi,
@@ -26,14 +30,56 @@
                         opštine Danilovgrad, dok rezervoarski prostor iznosi 1.845m³.
                     </p>
                 </div>
-                <div class="history-right">
+                <div class="history-right-about">
                     <img src="/images/Image 1.png" alt="">
                 </div>
             </div>
         </div>
         <div class="activities">
-            <div class="container">
-
+                <div class="row">
+                    <h2>OSNOVNE DJELATNOSTI DRUŠTVA SU:</h2>
+                    <div class="col-sm-4 pl-0 circle">
+                        <figure class="figure">
+                            <img src="/images/circle.png" class="figure-img img-fluid rounded" alt="">
+                            <figcaption class="figure-caption text-center"><h3>Javno vodosnadbijevanje</h3></figcaption>
+                          </figure>
+                    </div>
+                    <div class="col-sm-4 circle">   <figure class="figure">
+                        <img src="/images/circle.png" class="figure-img img-fluid rounded" alt="">
+                        <figcaption class="figure-caption text-center"><h3>Upravljanje otpadnim vodama</h3></figcaption>
+                      </figure></div>
+                    <div class="col-sm-4 pr-0 circle">   <figure class="figure">
+                        <img src="/images/circle.png" class="figure-img img-fluid rounded" alt="">
+                        <figcaption class="figure-caption text-center"><h3>upravljanje atmosferskim vodama </h3></figcaption>
+                      </figure></div>
+                </div>
+                <div class="row justify-content-center">
+                    <h2>DOPUNSKE DJELATNOSTI DRUŠTVA SU:</h2>
+                    <div class="col-sm-4 circle">   <figure class="figure">
+                        <img src="/images/circle.png" class="figure-img img-fluid rounded" alt="">
+                        <figcaption class="figure-caption text-center"><h3>izgradnja vodovodne kanalizacione mreže</h3></figcaption>
+                      </figure></div>
+                    <div class="col-sm-4 circle">   <figure class="figure">
+                        <img src="/images/circle.png" class="figure-img img-fluid rounded" alt="">
+                        <figcaption class="figure-caption text-center"><h3>održavanje vodovodne i kanalizacione mreže</h3></figcaption>
+                      </figure></div>
             </div>
         </div>
-@endsection
+        <div class="drugitekst text-center">
+
+
+            <p>Izvori finansiranja za usluge od javnog interesa su:<br>
+                Cijena komunalne usluge odnosno komunalnog proizvoda<br>
+                Budžet lokalne samouprave<br>
+                Drugi izvori u skladu sa zakonom<br>
+                Tijela za donošenje odluka su Odbor  direktora i Izvršni direktor.<br>
+                Djelatnosti koje će Društvo obavljati definisane su: <br>
+                Zakonom o vodama (Sl. list br. 27/07; Sl. list br. 32/11 o izmjenama i dopunama)<br>
+                Zakonom o komunalnim djelatnostima (Sl. list RCG br.12/95 i Sl. List RCG 55/16);<br>
+                Odlukom o osnivanju DOO ,,Vodovod i kanalizacija“ Danilovgrad (Sl. list CG 2/14)<br>
+                Odlukom o vodosnabdijevanju na području opštine Danilovgrad(Sl. listCG 2/07)<br>
+                Odlukom o javnoj kanalizaciji na području opštine Danilovgrad (Sl. list CG 2/07)<br>
+                Društvo trenutno zapošljava 73 radnika, od kojih su svi zapošljeni na neodređeno vrijeme. 
+                </p>
+        </div>
+            @endsection

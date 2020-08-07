@@ -1,130 +1,145 @@
-/* /////////////////////////////fika */
+.header {
+    background: rgb(255, 255, 255);
+    background: linear-gradient(150deg, rgba(255, 255, 255, 1) 59%, rgba(0, 0, 254, 1) 50%, rgba(0, 0, 254, 1) 100%);
 
+}
 
-
-nav {
+.header-content {
+    display: flex;
+    justify-content: space-between;
     width: 100%;
     margin: auto;
+    padding: 30px;
+    padding: 28px 0px;
+    align-items: center;
 }
 
-nav ul {
-    list-style: none;
-    margin: auto;
+.header-left {
+    display: table;
+    align-items: baseline;
+    width: 50%;
+    margin-left: 0;
+    margin-right: auto;
+    justify-content: space-around;
+}
+
+.header-left div {
+    display: inline-block;
+    margin-left: 14px;
     padding: 0;
-    width: 90%;
+}
+
+.header-left a {
+    color: #707070;
+    text-decoration: none;
+}
+
+.header-left a:hover {
+    color: #464545;
+}
+
+.hedimg {
+    width: 90px;
+    z-index: 20;
+    position: absolute;
+    top: 0;
+    left: 6%;
+}
+
+
+.header-right {
     display: flex;
+    justify-content: space-between;
+    width: 35%;
+    margin-right: 2%;
 }
 
-
-/* Mobile navigation */
-.nav-mobile {
-    display: none;
-    position: absolute;
-    top: 40px;
-    right: 15px;
-    height: 70px;
-    width: 70px;
+.header-right div {
+    display: flex;
+    align-items: center;
 }
 
-#nav-toggle {
-    position: absolute;
-    left: 18px;
-    top: 22px;
-    cursor: pointer;
-    padding: 10px 35px 16px 0px;
+.header-right div h6 {
+    color: white;
+    padding-left: 5px;
+    font-weight: 400 !important;
+
 }
-
-#nav-toggle span,
-#nav-toggle span:before,
-#nav-toggle span:after {
-    cursor: pointer;
-    border-radius: 1px;
-    height: 5px;
-    width: 45px;
-    background: #f7ffff;
-    position: absolute;
-    display: block;
-    content: '';
-    -webkit-transition: all 300ms ease-in-out;
-    transition: all 300ms ease-in-out;
-}
-
-#nav-toggle span:before {
-    top: -10px;
-}
-
-#nav-toggle span:after {
-    bottom: -10px;
-}
-
-#nav-toggle.active  {
-    -webkit-transform: rotate(90deg);
-    transform: rotate(90deg);
-}
-
-
 
 .hero {
+    position: relative;
     height: 92vh;
     /* Location of the image */
-  background-image: url('/images/coverdesctop.png');
+    background-image: url('/images/homepage.png');
 
-  /* Background image is centered vertically and horizontally at all times */
-  background-position: center center;
+    /* Background image is centered vertically and horizontally at all times */
+    background-position: center center;
 
-  /* Background image doesn't tile */
-  background-repeat: no-repeat;
+    /* Background image doesn't tile */
+    background-repeat: no-repeat;
 
-  /* Background image is fixed in the viewport so that it doesn't move when
+    /* Background image is fixed in the viewport so that it doesn't move when 
      the content's height is greater than the image's height */
-  background-attachment: fixed;
+    background-attachment: fixed;
 
-  /* This is what makes the background image rescale based
+    /* This is what makes the background image rescale based
      on the container's size */
-  background-size: cover;
+    background-size: cover;
 
-  /* Set a background color that will be displayed
+    /* Set a background color that will be displayed
      while the background image is loading */
-  background-color: #464646;
+    background-color: #464646;
 }
 
+.imageC {
+    align-self: center;
+}
 
 .hero-content {
-   display: flex;
-   width: 30%;
-   position: absolute;
-   top: 50%;
-   left: 10%;
+    display: flex;
+    width: auto;
+    position: absolute;
+    top: 50%;
+    left: 14%;
 }
 
 .hero-left {
-    background:  transparent linear-gradient(90deg, #1E7CF8 0%, #4D6D9700 100%) 0% 0% no-repeat padding-box;
-    width: 70%;
+    background: transparent linear-gradient(90deg, #1E7CF8 -24%, #4D6D9700 100%) 0% 0% no-repeat padding-box;
+    width: 100%;
     position: relative;
-    margin: -10px 0;
+    padding-left: 20px;
+}
+
+.hero-left h1 {
+    color: white;
+    text-align: right;
+    margin-right: 21px;
+    margin-top: 30px;
+    font-weight: 700;
 }
 
 .hero-left h2 {
     color: white;
-    position: absolute;
-    right: 20px;
-    font-weight: 600;
-}
-
-.hero-left h3 {
-    color: white;
     font-weight: 0 !important;
-    position: absolute;
-    top: 40px;
-    right: 20px;
+    text-align: right;
+    margin-bottom: 24px;
+    margin-right: 21px;
 }
 
 .hero img {
-    width: 70px;
+    width: 85px;
 }
+
 
 .post-left {
     width: 80%;
+}
+
+.strelice {
+    width: 100%;
+    text-align: center;
+    display: none;
+
 }
 
 .post-content {
@@ -136,25 +151,27 @@ nav ul {
     width: 90%;
     justify-content: space-between;
     margin-left: auto;
+    margin-top: 25px;
     margin-right: 40px;
 }
 
 .post-bottom button {
     background: #FFFFFF 0% 0% no-repeat padding-box;
-    border: 1px solid #0000FE;
+    border: 2px solid #0000FE;
     border-radius: 3px;
-    padding: 5px;
-    color:  #0000FE;
-    width: 126px;
+    padding: 5px 10px;
+    color: #0000FE;
+    width: 100%;
 }
 
 .post-right {
     width: 250px;
     object-fit: cover;
+    align-self: center;
 }
 
 .post-right img {
-   margin-top: 30px;
+    width: 90%;
 }
 
 .post-title {
@@ -168,12 +185,16 @@ nav ul {
 }
 
 .post-body {
-    width: 95%;
+    width: 100%;
 }
 
-.post-body span {
+.post-body p {
     margin: 20px;
+}
+
+.ghost {
     color: #A2A2A2;
+
 }
 
 .post-body p {
@@ -183,11 +204,11 @@ nav ul {
 .arrow {
     width: 0;
     height: 0;
-    border-top: 10px solid transparent;
-    border-right: 10px solid transparent;
+    border-top: 19px solid transparent;
+    border-right: 19px solid transparent;
 
-    border-bottom: 10px solid #0000FE;
-  }
+    border-bottom: 19px solid #0000FE;
+}
 
 
 .history {
@@ -207,7 +228,7 @@ nav ul {
 }
 
 .histroy-content p {
-    color:#4A4A4A;
+    color: #4A4A4A;
 }
 
 .history-left {
@@ -220,13 +241,10 @@ nav ul {
 }
 
 .image-title {
-    position: relative;
+    text-align: center;
 }
 
-.image-title span {
-    position: absolute;
-    right: 4%;
-}
+
 
 .history-button {
     margin: 30px;
@@ -237,21 +255,29 @@ nav ul {
     border: 1px solid #0000FE;
     border-radius: 3px;
     padding: 5px;
-    color:  #0000FE;
-    width: 126px;
+    color: #0000FE;
+    padding: 5px 15px;
+    width: auto;
 }
 
 .map {
-    text-align: center;
-    margin: 50px auto;
+    padding-top: 3%;
+    padding-bottom: 3%;
+    margin-right: 14%;
+    margin-left: 14%;
 }
 
 .map h2 {
-    font-weight: bold;
+    font-weight: 700 !important;
+    text-align: center;
 }
 
 .map p {
-    color: #A2A2A2;
+    text-align: center;
+}
+
+.divMap {
+    width: 100%;
 }
 
 .map iframe {
@@ -260,11 +286,26 @@ nav ul {
     height: 400px;
 }
 
+
+
+iframe {
+    height: 350px;
+}
+
+.arrowBack {
+    position: absolute;
+    left: -9%;
+    top: 13px;
+    transform: translate(2px, 0px);
+}
+
+
 .index-title {
-    color:#1D1D1D;
-    text-align:center;
+    color: #1D1D1D;
+    text-align: center;
     font-size: 30px;
-    font-weight: 700;
+    margin-bottom: 3%;
+    font-weight: 800 !important;
 }
 
 .social-phone {
@@ -275,8 +316,27 @@ nav ul {
     margin-bottom: 20px;
     border-bottom: 1px solid #0000FE;
 }
+
 .history-phone {
     display: none;
+}
+
+.sticky {
+    position: fixed;
+    top: 0;
+}
+
+.phone-icons {
+    display: none;
+}
+
+.phone-image {
+    display: none;
+}
+
+iframe {
+    width: 100%;
+    border: 2px solid #1E7CF8;
 }
 
 /* Arrow & Hover Animation */
@@ -284,26 +344,33 @@ nav ul {
     width: 75px;
     height: 65px;
 }
+
 #more-arrows:hover polygon {
     fill: #1E7CF8;
     transition: all 0.2s ease-out;
 }
+
 #more-arrows:hover polygon.arrow-bottom {
     transform: translateY(-18px);
 }
+
 #more-arrows:hover polygon.arrow-top {
     transform: translateY(18px);
 }
+
 polygon {
     fill: #1E7CF8;
     transition: all 0.2s ease-out;
 }
+
 polygon.arrow-middle {
     opacity: 0.75;
 }
+
 polygon.arrow-top {
     opacity: 0.5;
 }
+
 
 @media(max-width: 1370px) {
     .margin {
@@ -315,7 +382,167 @@ polygon.arrow-top {
     }
 }
 
+
+/* /////////////////////////////fika */
+
+.historyD {
+    padding-top: 3%;
+    padding-bottom: 3%;
+    margin-right: 14%;
+    margin-left: 14%;
+}
+
+.histroyH {
+    font-weight: 800 !important;
+    margin-bottom: 3%;
+}
+
+nav {
+    width: 100%;
+    margin: auto;
+}
+
+nav ul {
+    list-style: none;
+    margin: auto;
+    padding: 0;
+    margin-right: 4%;
+    margin-left: 14%;
+}
+
+
+/* Mobile navigation */
+.nav-mobile {
+    display: none;
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    height: 70px;
+    width: 70px;
+    background: #16169e61;
+    border-radius: 5px;
+}
+
+#nav-toggle {
+    position: absolute;
+    left: 18px;
+    top: 22px;
+    cursor: pointer;
+    padding: 10px 35px 16px 0px;
+}
+
+#nav-toggle span,
+#nav-toggle span:before,
+#nav-toggle span:after {
+    cursor: pointer;
+    border-radius: 1px;
+    height: 5px;
+    width: 35px;
+    background: #f7ffff;
+    position: absolute;
+    display: block;
+    content: '';
+    -webkit-transition: all 300ms ease-in-out;
+    transition: all 300ms ease-in-out;
+}
+
+#nav-toggle span:before {
+    top: -10px;
+}
+
+#nav-toggle span:after {
+    bottom: -10px;
+}
+
+#nav-toggle.active {
+    -webkit-transform: rotate(90deg);
+    transform: rotate(90deg);
+}
+
+
 @media only screen and (max-width: 798px) {
+    .tableI {
+        margin-right: 0% !important;
+        margin-left: 0% !important;
+        font-size: 18px;
+        text-align: center;
+        margin-top: 27% !important;
+        padding: 0px !important;
+    }
+
+    .histroyH {
+        margin-bottom: 7% !important;
+    }
+
+    .strelice {
+
+        display: block;
+
+    }
+
+    .hero-left h1 {
+        margin-top: 15px !important;
+        font-size: 26px !important;
+        line-height: 25px !important;
+    }
+
+    .hero-left h2 {
+        margin-top: 15px !important;
+        font-size: 20px !important;
+    }
+
+    .footerD {
+
+        margin-right: 4% !important;
+        margin-left: 4% !important;
+
+    }
+
+    .post-bottom {
+        display: none !important;
+    }
+
+    .postsDiv {
+        padding-top: 12% !important;
+        margin-right: 4% !important;
+        margin-left: 4% !important;
+
+    }
+
+    .historyD {
+
+        margin-right: 4% !important;
+        margin-left: 4% !important;
+    }
+
+    .map {
+        margin-right: 4% !important;
+        margin-left: 4% !important;
+        padding-top: 12% !important;
+        padding-bottom: 12% !important;
+    }
+
+    h1 {
+        font-size: 36px !important;
+    }
+
+    h2 {
+        font-size: 32px !important;
+    }
+
+    h3 {
+        font-size: 24px !important;
+    }
+
+    h5 {
+        font-size: 18px !important;
+    }
+
+    h6 {
+        font-size: 16px !important;
+
+    }
+
     nav ul {
         width: 100% !important;
     }
@@ -324,6 +551,11 @@ polygon.arrow-top {
         display: block;
         z-index: 20;
     }
+
+    .history-button button h5 {
+        margin: 0 !important;
+    }
+
     .header {
 
         max-width: 100vw;
@@ -332,55 +564,71 @@ polygon.arrow-top {
         width: 100%;
         z-index: 10;
     }
+
     .header-right {
         display: block !important;
         width: 100% !important;
         text-align: left;
         margin-top: 15%;
     }
+
     .header-left {
         display: block !important;
         text-align: left;
         width: 100% !important;
     }
+
     .header-left div a {
         font-size: 26px;
         color: white;
     }
+
     .header-left div {
         margin-top: 18px;
+        display: block;
 
     }
+
     .header-right div {
         margin-top: 18px;
 
     }
-    .header-right div p{
+
+    .header-right div h5 {
         font-size: 22px;
         color: white;
         margin-left: 9px;
 
 
     }
+
+    .phoneBut {
+        width: 50% !important;
+    }
+
     .search {
         position: absolute;
         bottom: 4%;
     }
+
     .header-content {
         display: block !important;
         margin-top: 10% !important;
-
+        width: 85% !important;
     }
+
     nav {
         width: 100%;
     }
+
     nav ul {
         display: none;
         height: 100vh;
         margin: 0;
         padding: 80px 10px;
         text-align: center;
-        background: transparent linear-gradient(90deg, #0000FE 0%, #00007FE6 100%) 0% 0% no-repeat padding-box;;
+        background: transparent linear-gradient(90deg, #0000FE 0%, #00007FE6 100%) 0% 0% no-repeat padding-box;
+        ;
 
     }
 
@@ -388,6 +636,7 @@ polygon.arrow-top {
     .hero {
         background-image: url('/images/coverphone.png');
     }
+
     .hero-content {
         width: 100%;
         left: 0%;
@@ -397,19 +646,17 @@ polygon.arrow-top {
         width: 70%;
         height: 120px;
     }
-    .hero-left h3 {
-        top: 63px;
-    }
 
-    .index-title {
-        text-align: start;
-    }
+
+
+
+
     .post-content {
         flex-direction: column;
     }
 
     .post-left {
-         width: 100%;
+        width: 100%;
     }
 
     .post-title {
@@ -430,40 +677,44 @@ polygon.arrow-top {
         justify-content: space-between;
     }
 
-    .post-body span {
+    .post-body p {
         margin: 0px;
     }
 
     .post-body p {
-        height: 40px;
+        height: 51px;
         overflow: hidden;
     }
 
     .post-right {
         width: 100%;
-        border-bottom: 1px solid #0000FE;
+        border-bottom: 2px solid #0000FE;
         padding-bottom: 20px;
     }
 
     .post-row {
         border-bottom: none;
         position: relative;
+        margin-bottom: 40px !important;
     }
 
     .arrow {
         position: absolute;
         bottom: 0;
     }
+
     .row {
         padding-left: 6vw;
         padding-right: 0vw;
     }
+
     .history {
         display: none;
     }
+
     .history-phone {
         display: block;
-        width: 95%;
+        width: 100%;
     }
 
     .history-phone h1 {
@@ -471,7 +722,7 @@ polygon.arrow-top {
         font-weight: bold;
     }
 
-    .image-title span {
+    .image-title p {
         position: relative;
         right: initial;
     }
@@ -484,4 +735,43 @@ polygon.arrow-top {
     .history-button button {
         font-weight: bold;
     }
+
+    .index-title {
+        text-align: left !important;
+        margin-bottom: 11% !important;
+    }
+
+}
+
+.index-title {
+    text-align: center;
+    font-weight: 700;
+}
+
+.footerD {
+    padding-top: 1px;
+    margin-right: 14%;
+    margin-left: 14%;
+    font-size: 18px !important;
+}
+
+.postsDiv {
+    padding-top: 4%;
+    margin-right: 14%;
+    margin-left: 14%;
+    padding-bottom: 4%;
+
+}
+
+.tableI {
+    margin-right: 14%;
+    margin-left: 14%;
+    margin-top: 4%;
+    font-size: 18px;
+    margin-bottom: 15%;
+    text-align: center;
+}
+
+.tableI a {
+    color: blue;
 }

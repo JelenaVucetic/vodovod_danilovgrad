@@ -1,10 +1,10 @@
 <div class="hero">
     <div class="hero-content">
         <div class="hero-left">
-            <h2>Vodovod i kanalizacija</h2>
-            <h3>Danilovgrad</h3>
+            <h1>Vodovod i kanalizacija</h1>
+            <h2>Danilovgrad</h2>
         </div>
-        <div>
+        <div class="imageC">
             <img src="/images/VIK-DG-Logo White.png" alt="">
         </div>
     </div>

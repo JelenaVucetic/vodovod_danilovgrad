@@ -16,16 +16,18 @@
     <!-- CSS
     ================================================== -->
     <link rel="stylesheet" href="/css/base.css">
-    <link rel="stylesheet" href="/css/main.css">
 
     <!--Boostrap Core CSS
     ================================================== -->
-    <link href="/admin/lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="/css/index.css">
-    <link rel="stylesheet" href="/css/post.css">
-    <link rel="stylesheet" href="/css/footer.css">
-    <link rel="stylesheet" href="/css/about.css">
+{{--     <link href="/admin/lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+ --}}    
+ <link rel="stylesheet" href="/css/bootstrap.css">
 
+    <link rel="stylesheet" href="/css/index.css">
+    <link rel="stylesheet" href="/css/footer.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,900;1,100;1,200;1,300;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&display=swap" rel="stylesheet">
 
     <!-- script
     ================================================== -->
@@ -68,10 +70,11 @@
 
     <!-- Map
   ================================================== -->
-    <div class="container map">
-        <h2>D.O.O. VIK DANILOVGRAD NA MAPI</h2>
-        <p>Ul. Jefta - Čaja Šćepanovića b.b. Danilovgrad</p>
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2939.519001147477!2d19.095362115696954!3d42.54427133144033!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x134dbeadeed2147f%3A0x1b90d5eb8bd5e8a0!2sJefta%20Scepanovica%20Caja%2C%20Montenegro!5e0!3m2!1sen!2s!4v1596472054318!5m2!1sen!2s" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+    <div class=" map">
+        <h2 class="my-3">D.O.O. VIK DANILOVGRAD NA MAPI</h2>
+        <p class="my-5">Ul. Jefta - Čaja Šćepanovića b.b. Danilovgrad</p>
+        <div class="divMap">        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2939.519001147477!2d19.095362115696954!3d42.54427133144033!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x134dbeadeed2147f%3A0x1b90d5eb8bd5e8a0!2sJefta%20Scepanovica%20Caja%2C%20Montenegro!5e0!3m2!1sen!2s!4v1596472054318!5m2!1sen!2s" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+        </div>
     </div>
     <!-- end Map-->
 

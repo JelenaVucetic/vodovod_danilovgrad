@@ -3,7 +3,9 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-
+use App\Post;
+use App\Image;
+use DB;
 class HomeController extends Controller
 {
     /**
@@ -31,6 +33,8 @@ class HomeController extends Controller
     }
 
     public function adminDashboard() {
-        return view("admin.dashboard");
+        $posts = Post::orderBy('created_at','DESC')->offset(0)->limit(3)->get();
+   
+        return view('posts.all', compact('posts'));
     }
 }

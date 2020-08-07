@@ -10,7 +10,7 @@ footer {
 
 .footer-left h3,
 .footer-middle h3,
-.footer-right h3{
+.footer-right h3 {
     font-size: 18px;
     color: white;
     font-weight: 100;
@@ -28,8 +28,8 @@ footer {
     color: white;
 }
 
-.footer-middle ul  {
-   list-style: none;
+.footer-middle ul {
+    list-style: none;
 }
 
 .footer-middle ul li::before {
@@ -50,7 +50,7 @@ footer {
 .footer-bottom-content {
     display: flex;
     justify-content: space-between;
-    margin: 20px 0;
+    margin-top: 20px;
     color: white;
 }
 
@@ -77,7 +77,10 @@ footer {
     .footer-content {
         flex-direction: column;
     }
-    .footer-left, .footer-middle, .footer-right {
+
+    .footer-left,
+    .footer-middle,
+    .footer-right {
         width: 100%;
     }
 

@@ -1,14 +1,112 @@
-.about-title {
-    font-size: 30px;
-    font-weight: bold;
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+    
 }
 
-.about {
-    margin: 50px auto;
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+    
 }
 
-.activities {
-    width: 100%;
-    background: #F3F3F3
-;
+@media only screen and (min-width: 1400px) {
+
+
+    .about-title {
+        font-weight: 800 !important;
+        margin-bottom: 30px;
+    }
+
+    .about {
+        margin-right: 14%;
+        margin-top: 5%;
+        margin-bottom: 4%;
+        margin-left: 14%;
+        position: relative;
+    }
+
+    .activities {
+        padding-bottom: 4%;
+        padding-top: 4%;
+        background: #F3F3F3;
+    }
+
+    .activities .row {
+        margin-right: 14% !important;
+
+        margin-left: 14% !important;
+
+    }
+
+    .activities .row h2 {
+        width: 100%;
+        margin-top: 2%;
+        margin-bottom: 5%;
+        text-align: center;
+        font-weight: 700 !important;
+
+    }
+
+    .circle {
+        text-align: center;
+    }
+
+    .figure-caption h3 {
+        text-transform: uppercase;
+    }
+
+    .drugitekst {
+        margin-right: 14%;
+        margin-top: 4%;
+        margin-bottom: 4%;
+        margin-left: 14%;
+    }
+
+    /* .drugitekst p {
+  text-align: left;
+} */
+    .histroy-content {
+        flex-wrap: wrap;
+    }
+
+    .history-right-about {
+        width: 20%;
+    }
+
+    .history-right-about img {
+        width: 100% !important;
+    }
+
+
+}
+
+@media only screen and (max-width: 798px) {
+    .about {
+        margin-right: 4%;
+        margin-top: 30%;
+        margin-bottom: 14%;
+        margin-left: 4%;
+    }
+
+    #nav-toggle span,
+    #nav-toggle span:before,
+    #nav-toggle span:after {
+
+        background: black !important;
+
+    }
+
+    .history-left {
+        width: 100% !important;
+    }
+
+    .history-right-about {
+        width: 100% !important;
+    }
+
+    .drugitekst {
+        margin-right: 4%;
+        margin-top: 14%;
+        margin-bottom: 14%;
+        margin-left: 4%;
+    }
 }

@@ -16,7 +16,7 @@
 </div>
 @endif
     <div>
-        <h2>Dodajte novu objavu</h2>
+        <h2>Dodajte novu vijest</h2>
 
         <form action="{{ route('posts.store') }}" method="POST" enctype="multipart/form-data">
             @csrf
@@ -37,7 +37,7 @@
                   <button class="btn btn-success" type="button" style="background: #4ECDC4;border-color: #4ECDC4;" ><i class="glyphicon glyphicon-plus" ></i>Dodaj</button>
                 </div> --}}
             </div>
-            <div class="form-group" style="display: flex;flex-direction: column;">
+       {{--      <div class="form-group" style="display: flex;flex-direction: column;">
                 <label class="col-sm-2 col-sm-2 control-label">Odaberite kategoriju</label>
                 <div class="col-sm-10">
                     <select id="" name="category_id">
@@ -46,7 +46,7 @@
                         <option value="3">Kategorija3</option>
                     </select>
                 </div>
-              </div>
+              </div> --}}
             <div class="form-group col-sm-10" style="margin: 30px 0">
                 <label class="col-sm-2 col-sm-2 control-label" style="padding-left: 0px;">Opis</label>
                 <textarea id="summary-ckeditor" class="ckeditor form-control" name="body" id="" rows="5" required> {{old('body')}}</textarea>

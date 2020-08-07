@@ -1,15 +1,14 @@
 @extends('layouts.master')
 @section('arrow.css')
-    <style>
-        .arrow {
-            display: none;
-        }
-    </style>
+
 @endsection
 @section('content')
-    <div class="container">
+<link rel="stylesheet" href="/css/post.css">
+
+    <div class="post">
+        <div class="arrowBack"><a href="/"><img src="/images/backArrow.svg" alt=""></a></div>
        <div class="single-post">
-            <h1>{{ $post->title }}</h1>
+            <h2>{{ $post->title }}</h2>
            <div class="single-post-img">
                <img src="/photos/{{$post->cover_image}}" alt="">
            </div>
@@ -22,25 +21,31 @@
                 <div class="post-content">
                     <div class="post-left">
                         <div class="post-title">
-                            <h2>{{$post->title}}</h2>
+                            <h3>{{$post->title}}</h3>
                         </div>
-                        <div class="post-body"><div class="post-meta">
-                                <span>{{$post->created_at->format('d.m.Y.')}}</span> <br>
+                        <div class="post-body">
+                            <div class="post-meta">
+                                <p class="ghost">{{$post->created_at->format('d.m.Y.')}}</p> <br>
                                 <div class="social-phone">
                                     <img src="/images/iconfindersocial.png" alt="" style="width: 25px;">
-                                    <img src="/images/iconfinde.svg" alt=""  style="width: 25px;">
+                                    <img src="/images/iconfinder.svg" alt=""  style="width: 25px;">
                                     <img src="/images/Component.svg" alt=""  style="width: 25px;">
                                 </div>
                             </div>
-                            <p>{{$post->body}}</p>
+                            <p style="
+                            margin-top: 0;
+                        ">  @php
+                                                    
+                                echo substr($post->body, 0, 335);
+                            @endphp</p>
                         </div>
                         <div class="post-bottom">
                             <div>
-                                <button> <a href="">Pogledaj detaljnije</a> </button>
+                                <button><h6> <a href="/posts/{{$post->id}}">Pogledaj detaljnije</a> </h6></button>
                             </div>
                             <div class="social-desctop">
-                                <img src="/images/iconfinder_social-02_3146790.png" alt="" style="width: 25px;">
-                                <img src="/images/iconfinder_4_939755.svg" alt=""  style="width: 25px;">
+                                <img src="/images/iconfindersocial.png" alt="" style="width: 25px;">
+                                <img src="/images/iconfinder.svg" alt=""  style="width: 25px;">
                                 <img src="/images/Component.svg" alt=""  style="width: 25px;">
                             </div>
                         </div>

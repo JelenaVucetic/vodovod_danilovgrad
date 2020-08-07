@@ -28,7 +28,7 @@
                   @endfor
   
                 </div>  
-                <div class="form-group" style="display: flex;flex-direction: column;">
+        {{--         <div class="form-group" style="display: flex;flex-direction: column;">
                     <label class="control-label" style="padding: 0 15px;">Odaberite kategoriju</label>
                     <div class="col-sm-10">
                         <select id="" name="category_id" id="category">
@@ -37,7 +37,7 @@
                             <option value="3">Kategorija3</option>
                         </select>
                     </div>
-                  </div>   
+                  </div>  --}}  
                 <div class="form-group col-sm-10" style="margin: 30px 0">
                     <label class="control-label" >Opis</label>
                     <textarea class="form-control" name="body"  rows="5" required id="body"></textarea>
@@ -45,7 +45,7 @@
                 </div>
                 <div class="form-group col-sm-10">
                 </div>
-                    <button type="button" class="btn btn-primary confirm-button" style="background: #4ECDC4; border:#4ECDC4;">Save changes</button>
+                 <button type="button" class="btn btn-primary confirm-button" style="background: #4ECDC4; border:#4ECDC4;">Save changes</button>
             </form>
         </div>
       </div>

@@ -1,14 +1,14 @@
 @extends('admin.master')
 @section('content')
 
-
+<h1 class="text-center my-4">Početna Admin Strana</h1>
 <!--Delete Modal -->
 <div class="modal fade" id="deleteModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
     <div class="modal-dialog">
       <div class="modal-content">
         <div class="modal-header">
           <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-          <h4 class="modal-title" id="myModalLabel">Da li ste sigurni da želite da obrišete ovu objavu?</h4>
+          <h5 class="modal-title" id="myModalLabel">Da li ste sigurni da želite da obrišete ovu objavu?</h5>
         </div>
         <div class="modal-body">
          <form id="delete-form" method="post">
@@ -35,7 +35,7 @@
 @endif
     <div class="col-lg-12">
       <div class="content-panel">
-        <h4><i class="fa fa-angle-right"></i>Objave</h4>
+        <h4><i class="fa fa-angle-right"></i>Vijesti</h4>
         <section id="unseen">
           <table class="table table-bordered table-striped table-condensed">
             <thead>
@@ -43,8 +43,8 @@
                 <th>Id</th>
                 <th>Naslov</th>
                 <th>Slike</th>
-                <th>Kategorija</th>
-                <th>SadrŽaj</th>
+{{--                 <th>Kategorija</th>
+ --}}                <th>SadrŽaj</th>
                 <th>Izmijeni</th>
                 <th>Obriši</th>
               </tr>
@@ -61,8 +61,8 @@
                    @php $count_images++; @endphp
                     @endforeach
                 </td>
-                <td>{{$post->category_id}}</td>
-                <td>{{$post->body}}</td>
+{{--                 <td>{{$post->category_id}}</td>
+ --}}                <td>{{$post->body}}</td>
                 <td> <button type="button" class="btn btn-info" data-toggle="modal" data-target="#myModal"
                             data-id="{{ $post->id }}"
                             data-title="{{ $post->title }}"
