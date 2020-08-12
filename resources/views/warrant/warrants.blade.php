@@ -10,13 +10,13 @@
 
     <div class="col-lg-12">
       <div class="content-panel">
-        <h4 class="my-5"><i class="fa fa-angle-right mx-2"></i>Putni nalozi</h4>
+        <h4 class="my-5 text-left"><i class="fa fa-angle-right mx-2"></i>Putni nalozi</h4>
         <section id="unseen">
-          <table class="table table-bordered table-striped table-condensed">
+          <table class=" col-l-12 col-xl-12 col-sm-12 col-xs-12  table  table-hover table-condensed">
             <thead>
               <tr>
                 <th>Naslov</th>
-                <th>Fajl</th>
+                <th>PDF Fajl</th>
               </tr>
             </thead>
             <tbody>
@@ -24,10 +24,11 @@
               <tr>
                 <td>{{$warrant->title}}</td>
                  <td></a>
-                 @if ($warrant->pdf_file) 
-                 <a href="/files/downloadW/{{$warrant->id}}" target="_blank" style="text-decoration: none !important;">{{$warrant->pdf_file}}
+                  
+              
+                 <a href="/putni/{{$warrant->pdf_file}}" target="_blank" style="text-decoration: none !important;">
+                  Preuzmite Putni Nalog
                 </a>
-              @endif
             </td>
               </tr>  
      

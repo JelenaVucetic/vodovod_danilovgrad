@@ -55,7 +55,7 @@ class NoticeController extends Controller
          
         ],
         [
-            'title.required' => 'Unesite naslov izveštaja',
+            'title.required' => 'Unesite naslov obaveštenja',
             'pdf_file.required' => 'Unesite pdf fajl',
          
         ]);
@@ -70,11 +70,11 @@ class NoticeController extends Controller
      }
        // Create Notice
        $notice = new Notice;
-       $notice->title ='Izveštaj - '. $request->input('title');
+       $notice->title = $request->input('title');
        $notice->pdf_file = $filename;
        $notice->save();
 
-        return back()->with('success','Izveštaj je uspjeŠno kreiran!');
+        return back()->with('success','Obaveštenje je uspjeŠno kreirano!');
   
     }
 
@@ -113,7 +113,7 @@ class NoticeController extends Controller
             'title' => 'required',
         ],
         [
-            'title.required' => 'Unesite naslov izveštaja',
+            'title.required' => 'Unesite naslov obaveštenja',
         ]);
         
         if($request->hasFile('pdf_file')) {
@@ -155,7 +155,7 @@ class NoticeController extends Controller
         $notice = Notice::find($notice->id);
         $notice->delete();
 
-        return back()->with('success', 'IZveštaj je uspješno obrisan!');
+        return back()->with('success', 'Obaveštenje je uspješno obrisano!');
     }
     public function downloadN(Request $request, $id){
     

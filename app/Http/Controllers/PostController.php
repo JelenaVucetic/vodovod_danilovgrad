@@ -20,7 +20,12 @@ class PostController extends Controller
    
         return view('posts.all', compact('posts'));
     }
-
+    public function index2()
+    {
+        $posts = Post::orderBy('created_at','DESC')->get();
+   
+        return view('pages.postsAll', compact('posts'));
+    }
     /**
      * Show the form for creating a new resource.
      *
@@ -46,6 +51,7 @@ class PostController extends Controller
             'cover_image' => 'required|image|mimes:jpeg,png,jpg|max:2048'
         ],
         [
+            
             'title.required' => 'Unesite naslov objave',
             'body.required' => 'Unesite sadrŽaj objave',
             'photos.required' => 'Unesite slike',
@@ -65,6 +71,7 @@ class PostController extends Controller
             'cover_image' => $imageName,
             'category_id' => $request->category_id
         ]);
+    
 
     if($request->hasfile('photos'))
      {
@@ -98,7 +105,7 @@ class PostController extends Controller
     public function show(Post $post)
     {
         $post = Post::findOrFail($post->id);
-        $posts = Post::orderBy('created_at', 'desc')->where('id', '!=', $post->id)->get();
+        $posts = Post::orderBy('created_at', 'desc')->where('id', '!=', $post->id)->offset(0)->limit(3)->get();
 
         return view("posts.show", compact('post', 'posts'));
     }

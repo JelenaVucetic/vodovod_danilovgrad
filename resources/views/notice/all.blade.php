@@ -7,7 +7,7 @@
       <div class="modal-content">
         <div class="modal-header">
           <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-          <h5 class="modal-title" id="myModalLabel">Da li ste sigurni da želite da obrišete ovaj izvestaj?</h5>
+          <h5 class="modal-title" id="myModalLabel">Da li ste sigurni da želite da obrišete ovaj dokument?</h5>
         </div>
         <div class="modal-body">
          <form id="delete-formN" method="post">
@@ -34,7 +34,7 @@
 @endif
     <div class="col-lg-12">
       <div class="content-panel">
-        <h4><i class="fa fa-angle-right"></i>Izvestaji</h4>
+        <h4><i class="fa fa-angle-right"></i>Dokumentacija</h4>
         <section id="unseen">
           <table class="table table-bordered table-striped table-condensed">
             <thead>

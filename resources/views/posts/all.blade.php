@@ -8,7 +8,7 @@
       <div class="modal-content">
         <div class="modal-header">
           <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-          <h5 class="modal-title" id="myModalLabel">Da li ste sigurni da želite da obrišete ovu objavu?</h5>
+          <h5 class="modal-title" id="myModalLabel">Da li ste sigurni da želite da obrišete ovo obavještenje?</h5>
         </div>
         <div class="modal-body">
          <form id="delete-form" method="post">
@@ -35,7 +35,7 @@
 @endif
     <div class="col-lg-12">
       <div class="content-panel">
-        <h4><i class="fa fa-angle-right"></i>Vijesti</h4>
+        <h4><i class="fa fa-angle-right"></i>Obavještenja</h4>
         <section id="unseen">
           <table class="table table-bordered table-striped table-condensed">
             <thead>
@@ -62,7 +62,10 @@
                     @endforeach
                 </td>
 {{--                 <td>{{$post->category_id}}</td>
- --}}                <td>{{$post->body}}</td>
+ --}}                <td> @php
+												
+                        echo substr($post->body, 0, 200);
+                        @endphp</td>
                 <td> <button type="button" class="btn btn-info" data-toggle="modal" data-target="#myModal"
                             data-id="{{ $post->id }}"
                             data-title="{{ $post->title }}"

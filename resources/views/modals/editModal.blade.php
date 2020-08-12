@@ -5,7 +5,7 @@
       <div class="modal-content">
         <div class="modal-header">
           <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-          <h4 class="modal-title" id="myModalLabel">Izmijenite objavu</h4>
+          <h4 class="modal-title" id="myModalLabel">Izmijenite obavještenje</h4>
         </div>
         <div class="modal-body">
          <form method="post" id="edit-form" enctype="multipart/form-data">
@@ -45,7 +45,7 @@
                 </div>
                 <div class="form-group col-sm-10">
                 </div>
-                 <button type="button" class="btn btn-primary confirm-button" style="background: #4ECDC4; border:#4ECDC4;">Save changes</button>
+                 <button type="button" class="btn btn-primary confirm-button" style="background: #4ECDC4; border:#4ECDC4;">Sačuvaj izmjene</button>
             </form>
         </div>
       </div>

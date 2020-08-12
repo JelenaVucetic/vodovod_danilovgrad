@@ -24,7 +24,7 @@
 }
 </style>
     <div>
-        <h2>Dodajte novi izvestaj</h2>
+        <h2>Dodajte novi dokument</h2>
 
         <form action="{{ route('notices.store') }}" method="POST" enctype="multipart/form-data">
             @csrf
@@ -40,7 +40,7 @@
             </div>
     
             <div class="form-group col-sm-10">
-                <button type="submit" class="btn btn-large btn-primary" style="background: #4ECDC4; border:#4ECDC4;">Dodajte izvestaj</button>
+                <button type="submit" class="btn btn-large btn-primary" style="background: #4ECDC4; border:#4ECDC4;">Dodajte dokument</button>
               </div>
         </form>
     </div>

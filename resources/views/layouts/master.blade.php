@@ -6,9 +6,24 @@
     ================================================== -->
     <meta charset="utf-8">
     <title>ViK Danilovgrad</title>
-    <meta name="description" content="">
-    <meta name="author" content="">
+    <meta name="description" content="ViK Danilovgrad | Početna Strana">
+    <meta name="author" content="QQRIQ PeacefulNoob">
+    <meta name="keywords" content="Danilovgradski vodovodni sistem, posle cetinjskog, je najstariji vodovodni sistem u Crnoj Gori. ">
 
+    <link rel="icon" href="favicon.ico" type="image/x-icon"/>
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
+
+    <meta property="og:image" content="https://vikdanilovgrad.qqriq.me/images/Cover-slika-2.jpg" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://vikdanilovgrad.qqriq.me/" />
+    <meta property="og:title" content="ViK Danilovgrad" />
+    <meta property="og:description" content="Danilovgradski vodovodni sistem, posle cetinjskog, je najstariji vodovodni sistem u Crnoj Gori. " />
+    
+    <link rel="icon" type="image/png" href="/images/VIK-DG-Logo-Color.png" />
+    <link rel="apple-touch-icon-precomposed" href="/images/VIK-DG-Logo-Color.png" type="image/png" sizes="152x152" />
+    <link rel="apple-touch-icon-precomposed" href="/images/VIK-DG-Logo-Color.png" type="image/png" sizes="120x120" />
+    <link rel="apple-touch-icon" href="/images/VIK-DG-Logo-Color.png" sizes="180x180" />
+  
     <!-- mobile specific metas
     ================================================== -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -21,6 +36,8 @@
     ================================================== -->
 {{--     <link href="/admin/lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
  --}}    
+ <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-beta.1/dist/css/select2.min.css" rel="stylesheet" />
+
  <link rel="stylesheet" href="/css/bootstrap.css">
 
     <link rel="stylesheet" href="/css/index.css">
@@ -36,11 +53,7 @@
 
     <!-- favicons
     ================================================== -->
-{{--     <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
-    <link rel="manifest" href="site.webmanifest"> --}}
-   {{-- @yield('arrow.css')--}}
+
 </head>
 
 
@@ -89,14 +102,12 @@
     <script src="/js/jquery-3.2.1.min.js"></script>
     <script src="/admin/lib/bootstrap/js/bootstrap.min.js"></script>
     <script src="/js/main.js"></script>
-    <script src="//cdn.ckeditor.com/4.14.1/standard/ckeditor.js"></script>
-    <script type="text/javascript">
-        $(document).ready(function () {
-            $('.ckeditor').ckeditor();
-        });
-    </script>
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-beta.1/dist/js/select2.min.js"></script>
 
     <script>
+    $(document).ready(function() {
+    $('.js-example-basic-multiple').select2();
+});
         window.jQuery(document).ready(function ($) {
             (function ($) { // Begin jQuery
                 $(function () { // DOM ready

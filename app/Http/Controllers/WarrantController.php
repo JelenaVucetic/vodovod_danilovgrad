@@ -50,12 +50,12 @@ class WarrantController extends Controller
     public function store(Request $request)
     {
         $request->validate([
-            'title' => 'required',
+            'date' => 'required',
             'pdf_file' => 'required',
          
         ],
         [
-            'title.required' => 'Unesite naslov putnog naloga',
+            'date.required' => 'Unesite datum putnog naloga',
             'pdf_file.required' => 'Unesite pdf fajl',
          
         ]);
@@ -70,7 +70,7 @@ class WarrantController extends Controller
      }
        // Create Warrant
        $warrant = new Warrant;
-       $warrant->title = 'Putni Nalozi - ' . $request->input('title') .' ' . ' godine.';
+       $warrant->title = 'Putni Nalozi - ' . $request->input('date') .' ' . ' godine.';
        $warrant->pdf_file = $filename;
        $warrant->save();
 
@@ -114,7 +114,7 @@ class WarrantController extends Controller
         [
             'title.required' => 'Unesite naslov putnog naloga',
         ]);
-        
+        $title= 'Putni Nalozi - ' . $request->input('title') .' ' . ' godine.';
         if($request->hasFile('pdf_file')) {
   
             $uniqueFileName = $request->file('pdf_file')->getClientOriginalName();
@@ -124,13 +124,13 @@ class WarrantController extends Controller
              $file->move($filePath, $filename);
 
              DB::table('warrants')->where('id', $warrant->id)->update([
-                'title' => $request->title,
+                'title' => $title,
                 'pdf_file' =>$filename,
          
             ]); 
       }else{
         DB::table('warrants')->where('id', $warrant->id)->update([
-            'title' => $request->title,
+            'title' => $title
      
         ]); 
       }

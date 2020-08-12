@@ -3,14 +3,14 @@
  *
  * ------------------------------------------------------------------- */
 
-(function($) {
+(function ($) {
 
     "use strict";
-    
+
     const cfg = {
-                scrollDuration : 800, // smoothscroll duration
-                mailChimpURL   : ''   // mailchimp url
-                };
+        scrollDuration: 800, // smoothscroll duration
+        mailChimpURL: '' // mailchimp url
+    };
     const $WIN = $(window);
 
 
@@ -21,23 +21,23 @@
 
 
 
-   /* preloader
-    * -------------------------------------------------- */
-    const ssPreloader = function() {
+    /* preloader
+     * -------------------------------------------------- */
+    const ssPreloader = function () {
 
         $("html").addClass('ss-preload');
 
-        $WIN.on('load', function() {
+        $WIN.on('load', function () {
 
             // force page scroll position to top at page refresh
             // $('html, body').animate({ scrollTop: 0 }, 'normal');
 
             // will first fade out the loading animation 
-            $("#loader").fadeOut("slow", function() {
+            $("#loader").fadeOut("slow", function () {
                 // will fade out the whole DIV that covers the website.
                 $("#preloader").delay(300).fadeOut("slow");
-            }); 
-            
+            });
+
             // for hero content animations 
             $("html").removeClass('ss-preload');
             $("html").addClass('ss-loaded');
@@ -47,16 +47,16 @@
 
 
     /* mobile menu
-    * ---------------------------------------------------- */ 
-    const ssMobileMenu = function() {
+     * ---------------------------------------------------- */
+    const ssMobileMenu = function () {
 
         const $toggleButton = $('.header-menu-toggle');
         const $headerContent = $('.header-content');
         const $siteBody = $("body");
 
-        $toggleButton.on('click', function(event){
+        $toggleButton.on('click', function (event) {
             event.preventDefault();
-            
+
             // at 800px and below
             if (window.matchMedia('(max-width: 800px)').matches) {
                 $toggleButton.toggleClass('is-clicked');
@@ -64,8 +64,8 @@
             }
         });
 
-        
-        $WIN.on('resize', function() {
+
+        $WIN.on('resize', function () {
 
             // above 800px
             if (window.matchMedia('(min-width: 801px)').matches) {
@@ -99,25 +99,25 @@
     };
 
 
-   /* alert boxes
-    * ------------------------------------------------------ */
-    const ssAlertBoxes = function() {
+    /* alert boxes
+     * ------------------------------------------------------ */
+    const ssAlertBoxes = function () {
 
-        $('.alert-box').on('click', '.alert-box__close', function() {
+        $('.alert-box').on('click', '.alert-box__close', function () {
             $(this).parent().fadeOut(500);
-        }); 
+        });
 
     };
 
-    
-   /* smooth scrolling
-    * ------------------------------------------------------ */
-    const ssSmoothScroll = function() {
-        
+
+    /* smooth scrolling
+     * ------------------------------------------------------ */
+    const ssSmoothScroll = function () {
+
         $('.smoothscroll').on('click', function (e) {
             const target = this.hash;
             const $target = $(target);
-            
+
             e.preventDefault();
             e.stopPropagation();
 
@@ -131,19 +131,19 @@
     };
 
 
-   /* back to top
-    * ------------------------------------------------------ */
-    const ssBackToTop = function() {
-        
+    /* back to top
+     * ------------------------------------------------------ */
+    const ssBackToTop = function () {
+
         const pxShow = 800;
         const $goTopButton = $(".ss-go-top")
 
         // Show or hide the button
         if ($(window).scrollTop() >= pxShow) $goTopButton.addClass('link-is-visible');
 
-        $(window).on('scroll', function() {
+        $(window).on('scroll', function () {
             if ($(window).scrollTop() >= pxShow) {
-                if(!$goTopButton.hasClass('link-is-visible')) $goTopButton.addClass('link-is-visible')
+                if (!$goTopButton.hasClass('link-is-visible')) $goTopButton.addClass('link-is-visible')
             } else {
                 $goTopButton.removeClass('link-is-visible')
             }
@@ -152,8 +152,8 @@
 
 
 
-   /* initialize
-    * ------------------------------------------------------ */
+    /* initialize
+     * ------------------------------------------------------ */
     (function ssInit() {
 
         ssPreloader();
@@ -165,3 +165,28 @@
     })();
 
 })(jQuery);
+
+/* $(function () {
+    var images = ['Cover-slika-2.jpg', 'Cover-slika-3.jpg'];
+    $('.hero').css({
+        'background-image': 'url(images/' + images[Math.floor(Math.random() * images.length)] + ')'
+    });
+}); */
+
+
+function copyToClipboard(element) {
+    var $temp = $("<input>");
+    $("body").append($temp);
+    $temp.val($(element).text()).select();
+    document.execCommand("copy");
+    alert("Link kopiran !");
+    $temp.remove();
+
+}
+
+
+/* $(".search").click(function () {
+  
+    $(".select2-container").css("display", "inline");
+});
+ */

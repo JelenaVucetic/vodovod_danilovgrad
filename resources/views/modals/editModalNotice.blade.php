@@ -4,7 +4,7 @@
         <div class="modal-content">
             <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                <h4 class="modal-title" id="myModalLabelN">Izmijenite objavu</h4>
+                <h4 class="modal-title" id="myModalLabelN">Izmijenite dokument</h4>
             </div>
             <div class="modal-body">
 
@@ -26,7 +26,7 @@
                     </div>
 
                     <div class="form-group col-sm-10">
-                        <button type="button" class="btn btn-primary confirm-button" style="background: #4ECDC4; border:#4ECDC4;">Izmjenite izvestaj</button>
+                        <button type="button" class="btn btn-primary confirm-button" style="background: #4ECDC4; border:#4ECDC4;">Izmjenite dokument</button>
 
                     </div>
                 </form>

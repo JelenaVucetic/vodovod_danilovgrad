@@ -36,32 +36,32 @@
             </div>
         </div>
         <div class="activities">
-                <div class="row">
-                    <h2>OSNOVNE DJELATNOSTI DRUŠTVA SU:</h2>
-                    <div class="col-sm-4 pl-0 circle">
+                <div class="row my-4">
+                    <div class="col-12 text-center my-5">    <h3>OSNOVNE DJELATNOSTI DRUŠTVA SU:</h3></div>
+                    <div class="col-l-4 col-xl-4 col-sm-4 col-xs-12 pl-0 circle">
                         <figure class="figure">
-                            <img src="/images/circle.png" class="figure-img img-fluid rounded" alt="">
-                            <figcaption class="figure-caption text-center"><h3>Javno vodosnadbijevanje</h3></figcaption>
+                            <img src="/images/Ikonica1.svg" class="figure-img img-fluid rounded" alt="">
+                            <figcaption class="figure-caption text-center"><h4>Javno <br> vodosnadbijevanje</h4></figcaption>
                           </figure>
                     </div>
-                    <div class="col-sm-4 circle">   <figure class="figure">
-                        <img src="/images/circle.png" class="figure-img img-fluid rounded" alt="">
-                        <figcaption class="figure-caption text-center"><h3>Upravljanje otpadnim vodama</h3></figcaption>
+                    <div class="col-l-4 col-xl-4 col-sm-4 col-xs-12 circle">   <figure class="figure">
+                        <img src="/images/Ikonica2.svg" class="figure-img img-fluid rounded" alt="">
+                        <figcaption class="figure-caption text-center"><h4>Upravljanje <br> otpadnim vodama</h4></figcaption>
                       </figure></div>
-                    <div class="col-sm-4 pr-0 circle">   <figure class="figure">
-                        <img src="/images/circle.png" class="figure-img img-fluid rounded" alt="">
-                        <figcaption class="figure-caption text-center"><h3>upravljanje atmosferskim vodama </h3></figcaption>
+                    <div class="col-l-4 col-xl-4 col-sm-4 col-xs-12 pr-0 circle">   <figure class="figure">
+                        <img src="/images/Ikonica3.svg" class="figure-img img-fluid rounded" alt="">
+                        <figcaption class="figure-caption text-center"><h4>Upravljanje <br>atmosferskim vodama </h4></figcaption>
                       </figure></div>
                 </div>
-                <div class="row justify-content-center">
-                    <h2>DOPUNSKE DJELATNOSTI DRUŠTVA SU:</h2>
-                    <div class="col-sm-4 circle">   <figure class="figure">
-                        <img src="/images/circle.png" class="figure-img img-fluid rounded" alt="">
-                        <figcaption class="figure-caption text-center"><h3>izgradnja vodovodne kanalizacione mreže</h3></figcaption>
+                <div class="row my-4 justify-content-center">
+                    <div class="col-12 text-center my-5"> <h3>DOPUNSKE DJELATNOSTI DRUŠTVA SU:</h3></div>
+                    <div class="col-l-4 col-xl-4 col-sm-4 col-xs-12 circle">   <figure class="figure">
+                        <img src="/images/Ikonica4.svg" class="figure-img img-fluid rounded" alt="">
+                        <figcaption class="figure-caption text-center"><h4 >izgradnja vodovodne<br> kanalizacione mreže</h4></figcaption>
                       </figure></div>
-                    <div class="col-sm-4 circle">   <figure class="figure">
-                        <img src="/images/circle.png" class="figure-img img-fluid rounded" alt="">
-                        <figcaption class="figure-caption text-center"><h3>održavanje vodovodne i kanalizacione mreže</h3></figcaption>
+                    <div class="col-l-4 col-xl-4 col-sm-4 col-xs-12 circle">   <figure class="figure">
+                        <img src="/images/Ikonica5.svg" class="figure-img img-fluid rounded" alt="">
+                        <figcaption class="figure-caption text-center"><h4>održavanje vodovodne <br>i kanalizacione mreže</h4></figcaption>
                       </figure></div>
             </div>
         </div>

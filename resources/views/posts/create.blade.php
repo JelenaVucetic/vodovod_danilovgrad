@@ -16,7 +16,7 @@
 </div>
 @endif
     <div>
-        <h2>Dodajte novu vijest</h2>
+        <h2>Dodajte novo obavještenje</h2>
 
         <form action="{{ route('posts.store') }}" method="POST" enctype="multipart/form-data">
             @csrf
@@ -47,14 +47,27 @@
                     </select>
                 </div>
               </div> --}}
+
             <div class="form-group col-sm-10" style="margin: 30px 0">
-                <label class="col-sm-2 col-sm-2 control-label" style="padding-left: 0px;">Opis</label>
-                <textarea id="summary-ckeditor" class="ckeditor form-control" name="body" id="" rows="5" required> {{old('body')}}</textarea>
+                              <label class=" control-label" style="padding-left: 0px;">Opis</label>
+
+                <textarea class="ckeditor form-control" name="body"></textarea>
                 <div class="validate"></div>
+                
             </div>
             <div class="form-group col-sm-10">
-                <button type="submit" class="btn btn-large btn-primary" style="background: #4ECDC4; border:#4ECDC4;">Dodajte objavu</button>
+                <button type="submit" class="btn btn-large btn-primary" style="background: #4ECDC4; border:#4ECDC4;">Dodajte obavještenje</button>
               </div>
         </form>
     </div>
+    <script src="//cdn.ckeditor.com/4.14.1/standard/ckeditor.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('.ckeditor').ckeditor();
+        
+        });
+        
+    </script>
+    
+
 @endsection

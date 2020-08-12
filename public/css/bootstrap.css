@@ -172,15 +172,14 @@ sup {
 }
 
 a {
-    color: #007bff;
+    color: white;
     text-decoration: none;
     background-color: transparent;
 }
 
-a:hover {
+/* a:hover {
     color: #0056b3;
-    text-decoration: underline;
-}
+} */
 
 a:not([href]):not([tabindex]) {
     color: inherit;
@@ -400,40 +399,9 @@ h5,
 
 }
 
-h1,
-.h1 {
-    font-size: 48px;
-}
-
-h2,
-.h2 {
-    font-size: 36px;
-
-}
-
-h3,
-.h3 {
-    font-size: 28px;
-}
-
-h4,
-.h4 {
-    font-size: 24px;
-}
-
-h5,
-.h5 {
-    font-size: 21px;
-}
-
-h6,
-.h6 {
-    font-size: 18px;
-}
-
 p,
 .p {
-    font-size: 16px;
+    font-size: 14px;
 }
 
 .lead {
@@ -1835,7 +1803,7 @@ pre code {
 
 .table-hover tbody tr:hover {
     color: #212529;
-    background-color: rgba(0, 0, 0, 0.075);
+    background-color: rgba(90, 60, 60, 0.075);
 }
 
 .table-primary,
@@ -1852,12 +1820,12 @@ pre code {
 }
 
 .table-hover .table-primary:hover {
-    background-color: #9fcdff;
+    background-color: rgb(0 0 254 / 8%);
 }
 
 .table-hover .table-primary:hover>td,
 .table-hover .table-primary:hover>th {
-    background-color: #9fcdff;
+    background-color: rgb(0 0 254 / 8%);
 }
 
 .table-secondary,
@@ -4940,10 +4908,7 @@ input[type="button"].btn-block {
     color: rgba(0, 0, 0, 0.9);
 }
 
-.navbar-light .navbar-text a:hover,
-.navbar-light .navbar-text a:focus {
-    color: rgba(0, 0, 0, 0.9);
-}
+
 
 .navbar-dark .navbar-brand {
     color: #fff;

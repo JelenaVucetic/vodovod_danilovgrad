@@ -1,16 +1,12 @@
 footer {
-    background: #0000FE;
+    background: rgba(30, 124, 248, 1);
 }
 
-.footer-left,
-.footer-middle,
-.footer-right {
-    width: 33.3%;
-}
 
-.footer-left h3,
-.footer-middle h3,
-.footer-right h3 {
+
+.footer-left h4,
+.footer-middle h4,
+.footer-right h4 {
     font-size: 18px;
     color: white;
     font-weight: 100;
@@ -78,6 +74,19 @@ footer {
         flex-direction: column;
     }
 
+    a {
+        font-size: 14px !important;
+    }
+
+    p {
+        font-size: 14px !important;
+    }
+
+    .table td {
+        font-size: 14px !important;
+
+    }
+
     .footer-left,
     .footer-middle,
     .footer-right {
@@ -88,10 +97,7 @@ footer {
         display: block;
     }
 
-    .footer-left {
-        display: flex;
-        justify-content: space-between;
-    }
+
 
     .footer-left img {
         width: 120px;
