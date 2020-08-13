@@ -3,9 +3,9 @@
 namespace App\Http\Controllers;
 
 use App\Post;
-use App\Image;
 use DB;
 use Illuminate\Http\Request;
+use Intervention\Image\Facades\Image;
 
 class PostController extends Controller
 {
@@ -63,7 +63,8 @@ class PostController extends Controller
         ]);
 
         $imageName = time().'.'.$request->cover_image->extension();
-        $request->cover_image->move(public_path().'/photos/', $imageName);
+/*         $request->cover_image->move(public_path().'/photos/', $imageName);
+ */        Image::make($request->file('cover_image'))->resize(900, null, function($constraint) {  $constraint->aspectRatio();}) ->save('photos/'.$imageName);
 
         $post= Post::create([
             'title' => $request->title,

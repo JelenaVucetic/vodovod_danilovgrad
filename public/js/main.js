@@ -185,8 +185,12 @@ function copyToClipboard(element) {
 }
 
 
-/* $(".search").click(function () {
-  
-    $(".select2-container").css("display", "inline");
+$('#search1').select2({
+    minimumResultsForSearch: '',
+    placeholder: "Pretrazi "
+
 });
- */
+
+$(".search").click(function () {
+    $(".searchText").css("transform", " translate(0%, 0%)");
+});

@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Warrant;
 use Illuminate\Http\Request;
 use DB;
+use App\Post;
 
 class WarrantController extends Controller
 {
@@ -27,9 +28,10 @@ class WarrantController extends Controller
   
     }
     public function warrants()
-    {
+    {        $posts = Post::orderBy('created_at','DESC')->get();
+
         $warrants = Warrant::orderBy('created_at','DESC')->get();   
-        return view('warrant.warrants', compact('warrants'));
+        return view('warrant.warrants', compact('warrants','posts'));
     }
     /**
      * Show the form for creating a new resource.

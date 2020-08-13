@@ -33,7 +33,7 @@ class HomeController extends Controller
     }
 
     public function adminDashboard() {
-        $posts = Post::orderBy('created_at','DESC')->offset(0)->limit(3)->get();
+        $posts = Post::orderBy('created_at','DESC')->get();
    
         return view('posts.all', compact('posts'));
     }

@@ -37,6 +37,12 @@
     text-decoration: none;
 }
 
+.header-left a:hover {
+    color: #dadada;
+
+}
+
+
 /* .header-left a:hover {
     color: #464545;
 } */
@@ -54,6 +60,7 @@
     display: table;
     width: 35%;
     margin-right: 2%;
+    position: relative;
     justify-content: left;
 
 }
@@ -149,7 +156,7 @@
 
 
 .post-left {
-    width: 80%;
+    width: 74%;
 }
 
 .strelice {
@@ -182,13 +189,16 @@
 }
 
 .post-right {
-    width: 250px;
+    width: 25%;
     object-fit: cover;
     align-self: center;
 }
 
 .post-right img {
-    width: 90%;
+    width: 100%;
+    height: 200px;
+    border-radius: 10px;
+    object-fit: cover;
 }
 
 .post-title {
@@ -483,6 +493,26 @@ nav ul {
 }
 
 @media only screen and (max-width: 1198px) {
+    .searchText {
+
+        -webkit-transform: translate(0%, 200%) !important;
+        transform: translate(0%, 200%) !important;
+        width: 100% !important;
+        padding-top: 30px;
+        right: 4% !important;
+        left: 4% !important;
+    }
+
+    .search {
+        visibility: hidden;
+    }
+
+    .select2-container {
+        font-size: 16px !important;
+        width: 60vw !important
+    }
+
+
     nav ul {
         width: 100% !important;
     }
@@ -570,7 +600,7 @@ nav ul {
 
     .header-content {
         display: block !important;
-        margin-top: 10% !important;
+        margin-top: 5% !important;
         width: 85% !important;
     }
 
@@ -1008,17 +1038,28 @@ button h6 {
     margin: 0 !important;
 }
 
-.js-example-basic-multiple {
-    width: 30%;
+
+
+
+.searchText {
+    display: block !important;
+    height: 28px;
+    width: 93%;
+    position: absolute;
+    top: 0%;
+    -webkit-transform: translate(0%, -200%);
+    transform: translate(0%, -200%);
+    right: 7%;
+    z-index: 2;
+    cursor: pointer;
+    -webkit-transition: 0.4s ease;
+    transition: 0.4s ease;
+    background-color: transparent !important;
 }
 
 .select2-container {
-    display: none;
+    font-size: 14px !important;
 
-    position: absolute !important;
-    right: 0%;
-    top: 25%;
-    transform: translate(-25%, 0%);
 }
 
 .search button {

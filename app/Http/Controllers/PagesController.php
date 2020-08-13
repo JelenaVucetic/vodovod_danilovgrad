@@ -12,6 +12,8 @@ class PagesController extends Controller
     }
 
     public function about() {
-        return view('pages.about');
+        $posts = Post::orderBy('created_at','DESC')->get();
+
+        return view('pages.about',compact('posts'));
     }
 }

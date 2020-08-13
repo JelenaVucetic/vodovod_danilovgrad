@@ -101,8 +101,9 @@
     ================================================== -->
     <script src="/js/jquery-3.2.1.min.js"></script>
     <script src="/admin/lib/bootstrap/js/bootstrap.min.js"></script>
-    <script src="/js/main.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-beta.1/dist/js/select2.min.js"></script>
+
+    <script src="/js/main.js"></script>
 
     <script>
     $(document).ready(function() {

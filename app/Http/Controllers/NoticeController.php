@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Notice;
 use Illuminate\Http\Request;
 use DB;
+use App\Post;
 
 class NoticeController extends Controller
 {
@@ -26,9 +27,11 @@ class NoticeController extends Controller
     }
     public function notices()
     {
+        $posts = Post::orderBy('created_at','DESC')->get();
+
         $notices = Notice::orderBy('created_at','DESC')->get();
    
-        return view('notice.notices', compact('notices'));
+        return view('notice.notices', compact('notices','posts'));
     }
 
     /**
