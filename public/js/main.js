@@ -166,7 +166,7 @@
 
 })(jQuery);
 
-/* $(function () {
+/*  $(function () {
     var images = ['Cover-slika-2.jpg', 'Cover-slika-3.jpg'];
     $('.hero').css({
         'background-image': 'url(images/' + images[Math.floor(Math.random() * images.length)] + ')'
@@ -192,5 +192,6 @@ $('#search1').select2({
 });
 
 $(".search").click(function () {
-    $(".searchText").css("transform", " translate(0%, 0%)");
+    $("#search1").select2("open");
 });
+

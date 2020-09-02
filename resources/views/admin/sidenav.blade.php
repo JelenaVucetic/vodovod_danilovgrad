@@ -12,21 +12,21 @@
         <li class="mt">
           <a class="" href="{{route('admin.home')}}">
             <i class="fa fa-book"></i>
-            <span>Kreiraj novu vijest</span>
+            <span>Kreiraj novo obavestenje</span>
             </a>
         </li>
   
         <li class="mt">
           <a class="" href="/notices/create">
             <i class="fa fa-book"></i>
-            <span>Dodaj Izvestaj</span>
+            <span>Dodaj dokument</span>
             </a>
         </li>
                
         <li class="mt">
           <a class="" href="/notices">
             <i class="fa fa-book"></i>
-            <span> Lista izvestaja</span>
+            <span> Lista dokumenata</span>
             </a>
         </li>
      
@@ -40,6 +40,18 @@
           <a class="" href="/warrants">
             <i class="fa fa-book"></i>
             <span> Lista putnih naloga</span>
+            </a>
+        </li>
+        <li class="mt">
+          <a class="" href="/aktuelnos">
+            <i class="fa fa-book"></i>
+            <span> Lista aktuelnih projekata</span>
+            </a>
+        </li>
+        <li class="mt">
+          <a class="" href="/aktuelnos/create">
+            <i class="fa fa-book"></i>
+            <span>Dodaj aktuelni projekat</span>
             </a>
         </li>
     

@@ -14,8 +14,8 @@
             <div class="footer-middle col-l-3 col-xl-3 col-sm-12 col-xs-12 justify-content-center mt-3">
                 <h4 class="my-3">INFORMACIJE</h4>
                 <p> <span>Adresa:</span> Ul. Jefta - Čaja Šćepanovića b.b. Danilovgrad</p>
-                <p> <span>Telefon:</span> <a href="tel:069095581">+382 30 312 938</a></p>
-                <p> <span>Email adresa:</span> <a href="mailto:vik@danilovgrad.me">vik@danilovgrad.me</a></p>
+                <p> <span>Telefon:</span> <a href="tel:020 81 15 50 ">020 81 15 50 </a></p>
+                <p> <span>Email adresa:</span> <a href="mailto:jkzpdanilovgrad@t-com.me">jkzpdanilovgrad@t-com.me</a></p>
 
             {{--     <div>
                     <ul>

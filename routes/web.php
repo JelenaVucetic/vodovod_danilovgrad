@@ -18,6 +18,8 @@ Route::get('/', 'PagesController@index');
 Route::get('/about', 'PagesController@about');
 Route::get('/warrants-all', 'WarrantController@warrants');
 Route::get('/notices-all', 'NoticeController@notices');
+Route::get('/aktuelnos-all', 'AktuelnoController@aktuelnos');
+Route::get('/management','PagesController@management');
 
 Auth::routes();
 
@@ -28,6 +30,8 @@ Route::get('admin/dashboard', 'HomeController@adminDashboard')->name('admin.dash
 Route::resource('posts','PostController');
 Route::resource('warrants','WarrantController');
 Route::resource('notices','NoticeController');
+Route::resource('aktuelnos','AktuelnoController');
+
 
 
 Route::get('/home', 'HomeController@index')->name('home');

