@@ -18,6 +18,7 @@
         margin-bottom: 4%;
         margin-left: 14%;
         position: relative;
+        min-height: 40vh;
     }
 
     .activities {

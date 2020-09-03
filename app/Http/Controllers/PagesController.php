@@ -21,5 +21,9 @@ class PagesController extends Controller
 
         return view('pages.management',compact('posts'));
     }
+    public function basic() {
+        $posts = Post::orderBy('created_at','DESC')->get();
+        return view('pages.basic',compact('posts'));
+    }
     
 }

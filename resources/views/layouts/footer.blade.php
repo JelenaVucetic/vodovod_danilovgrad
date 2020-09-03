@@ -1,4 +1,19 @@
-<footer >
+<footer >  
+
+
+
+
+
+  width: 100VH;
+    /* HEIGHT: 100%; */
+    transform: translate(4%, 814%) rotate(-90deg);
+
+
+
+
+
+
+
     <div class="footerD">
         <div class="footer-content row">
             <div class="footer-left col-l-3 col-xl-3 col-sm-12 col-xs-12 justify-content-center mt-3">

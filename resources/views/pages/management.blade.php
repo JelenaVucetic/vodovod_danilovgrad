@@ -4,7 +4,9 @@
 <link rel="stylesheet" href="/css/about.css">
 
         <div class="about">
-              
+          <div class="arrowBack"><a href="/"><img src="/images/backArrow.svg" alt=""></a></div>
+
+          <h2 class="about-title">MENADŽMENT</h2>
           <!-- Tab links -->
           <div class="tab">
             <button class="tablinks" onclick="openType(event, 'management')">Menadžment</button>

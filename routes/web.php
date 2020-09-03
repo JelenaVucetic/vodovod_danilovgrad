@@ -20,6 +20,8 @@ Route::get('/warrants-all', 'WarrantController@warrants');
 Route::get('/notices-all', 'NoticeController@notices');
 Route::get('/aktuelnos-all', 'AktuelnoController@aktuelnos');
 Route::get('/management','PagesController@management');
+Route::get('/basic','PagesController@basic');
+
 
 Auth::routes();
 

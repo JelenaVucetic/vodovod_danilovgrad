@@ -14,8 +14,10 @@
                             <h6><a href="/">Naslovna</a></h6>
                         </div>
                         <div class="dropdown">
-                            <h6> <a href="/about">O nama</a></h6>
+                            <h6> <a href="#">O Nama</a></h6>
                             <div class="dropdown-content">
+                                <h6> <a href="/about">Istorijat</a></h6>
+                                <h6> <a href="/basic"> Osnovni Podaci </a></h6>
                                 <h6> <a href="/management">Menadžment </a></h6>
                                 <h6> <a href="/aktuelnos-all"> Aktuelni projekti </a></h6>
                                 </div>
