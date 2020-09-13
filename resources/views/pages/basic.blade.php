@@ -34,8 +34,38 @@
                 Tijela za donošenje odluka su Odbor  direktora i Izvršni direktor.<br>
                 </p>
         </div>
-      
     </div>
+
+    <div class="activities">
+        <div class="row my-4">
+            <div class="col-12 text-center my-5">    <h3>OSNOVNE DJELATNOSTI DRUŠTVA SU:</h3></div>
+            <div class="col-l-4 col-xl-4 col-sm-4 col-xs-12 pl-0 circle">
+                <figure class="figure">
+                    <img src="/images/Ikonica1.svg" class="figure-img img-fluid rounded" alt="">
+                    <figcaption class="figure-caption text-center"><h4>Javno <br> vodosnadbijevanje</h4></figcaption>
+                  </figure>
+            </div>
+            <div class="col-l-4 col-xl-4 col-sm-4 col-xs-12 circle">   <figure class="figure">
+                <img src="/images/Ikonica2.svg" class="figure-img img-fluid rounded" alt="">
+                <figcaption class="figure-caption text-center"><h4>Upravljanje <br> otpadnim vodama</h4></figcaption>
+              </figure></div>
+            <div class="col-l-4 col-xl-4 col-sm-4 col-xs-12 pr-0 circle">   <figure class="figure">
+                <img src="/images/Ikonica3.svg" class="figure-img img-fluid rounded" alt="">
+                <figcaption class="figure-caption text-center"><h4>Upravljanje <br>atmosferskim vodama </h4></figcaption>
+              </figure></div>
+        </div>
+        <div class="row my-4 justify-content-center">
+            <div class="col-12 text-center my-5"> <h3>DOPUNSKE DJELATNOSTI DRUŠTVA SU:</h3></div>
+            <div class="col-l-4 col-xl-4 col-sm-4 col-xs-12 circle">   <figure class="figure">
+                <img src="/images/Ikonica4.svg" class="figure-img img-fluid rounded" alt="">
+                <figcaption class="figure-caption text-center"><h4 >izgradnja vodovodne<br> kanalizacione mreže</h4></figcaption>
+              </figure></div>
+            <div class="col-l-4 col-xl-4 col-sm-4 col-xs-12 circle">   <figure class="figure">
+                <img src="/images/Ikonica5.svg" class="figure-img img-fluid rounded" alt="">
+                <figcaption class="figure-caption text-center"><h4>održavanje vodovodne <br>i kanalizacione mreže</h4></figcaption>
+              </figure></div>
+    </div>
+</div>
         <div class="drugitekst text-center">
         
             <h6 class="w-100">     Djelatnosti koje će Društvo obavljati definisane su:</h6> <br>
@@ -48,4 +78,5 @@
                 Društvo trenutno zapošljava 73 radnika, od kojih su svi zapošljeni na neodređeno vrijeme. 
                 </p>
         </div>
+
             @endsection

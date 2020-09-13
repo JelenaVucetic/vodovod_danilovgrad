@@ -24,14 +24,19 @@
     justify-content: space-around;
 }
 
+footer a {
+    color: white !important;
+}
+
 .hldiv {
     display: table-cell;
     margin-left: 14px;
-    padding: 0;
+    padding: 8px 0px !important;
 }
 
 .hldiv h6 {
     margin: 0 !important;
+    line-height: 1.5 !important;
 }
 
 .header-left a {
@@ -49,7 +54,7 @@
 } */
 
 .hedimg {
-    width: 52px;
+    width: 60px;
     z-index: 20;
     position: absolute;
     top: 0;
@@ -71,7 +76,7 @@
 }
 
 .header-right div img {
-    transform: translate(-5px, 4px);
+    transform: translate(-4px, 1px);
     float: left;
 }
 
@@ -271,8 +276,7 @@
 }
 
 .history-left {
-    width: 80%;
-    padding-right: 40px;
+    width: 73%;
 }
 
 .history-right img {

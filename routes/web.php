@@ -36,6 +36,5 @@ Route::resource('aktuelnos','AktuelnoController');
 
 
 
-Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/files/downloadN/{id}' , 'NoticeController@downloadN');
 Route::get('/files/downloadW/{id}' , 'WarrantController@downloadW');

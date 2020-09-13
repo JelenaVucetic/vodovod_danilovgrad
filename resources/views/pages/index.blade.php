@@ -94,7 +94,7 @@
         </a>
         </div> 
     </div>
-    <div class="history">
+ {{--    <div class="history">
         <div class="historyD">
             <h2 class="histroyH">ISTORIJAT NASTANKA DANILOVGRADSKOG VODOVODNOG SISTEMA</h2>
             <div class="histroy-content">
@@ -132,8 +132,8 @@
                 <button> <h6> <a href="/about">Pročitaj više</a> </h6> </button>
             </div>
         </div>
-    </div>
-    <div class="history-phone">
+    </div> --}}
+  {{--   <div class="history-phone">
         <div class="historyD">
             <h2 class="histroyH">ISTORIJAT <br> NASTANKA DANILOVGRADSKOG VODOVODNOG SISTEMA</h2>
             <div class="histroy-content">
@@ -161,7 +161,7 @@
                 <button class="phoneBut"><h6> <a href="/about">Pročitaj više</a> </h6></button>
             </div>
         </div>
-    </div><!-- Load Facebook SDK for JavaScript -->
+    </div> --}}<!-- Load Facebook SDK for JavaScript -->
     <div id="fb-root"></div>
     <script>(function(d, s, id) {
     var js, fjs = d.getElementsByTagName(s)[0];

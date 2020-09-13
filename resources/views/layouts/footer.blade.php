@@ -4,11 +4,6 @@
 
 
 
-  width: 100VH;
-    /* HEIGHT: 100%; */
-    transform: translate(4%, 814%) rotate(-90deg);
-
-
 
 
 

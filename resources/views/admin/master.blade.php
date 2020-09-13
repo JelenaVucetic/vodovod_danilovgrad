@@ -7,7 +7,7 @@
   <meta name="description" content="">
   <meta name="author" content="Dashboard">
   <meta name="keyword" content="Dashboard, Bootstrap, Admin, Template, Theme, Responsive, Fluid, Retina">
-  <title>Vodovod</title>
+  <title>Vodovod Danilovgrad</title>
 
   <!-- Favicons -->
   <link href="/admin/img/favicon.png" rel="icon">

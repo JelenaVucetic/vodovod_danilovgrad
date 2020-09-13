@@ -9,22 +9,24 @@
           <h2 class="about-title">MENADŽMENT</h2>
           <!-- Tab links -->
           <div class="tab">
-            <button class="tablinks" onclick="openType(event, 'management')">Menadžment</button>
+            <button class="tablinks" onclick="openType(event, 'director')">Izvršni direktor</button>
             <button class="tablinks" onclick="openType(event, 'odbor')">Odbor direktora</button>
+            <button class="tablinks" onclick="openType(event, 'management')">Menadžerski tim</button>
+
           </div>
 
           <!-- Tab content -->
-          <div id="management" class="tabcontent">
+          <div id="director" class="tabcontent">
             <div class="row">
               <div class="col-l-12 col-xl-12 col-sm-12 col-xs-12 mb-5 p-0">
                 <div class="card">
                   <div class="card-header">
-                  <h3>Menadžment</h3>   
+                    <h3>Izvršni direktor</h3>   
+
                     </div>
                   <div class="card-body">
-                    <h5 class="card-title">Izvršni direktor</h5>
                     <p class="card-text">
-                      Predrag Kalezić, dipl.pravnik<br>
+                    <b>  Predrag Kalezić, dipl.pravnik</b><br>
                       tel/fax: 020/811-550<br>
                       e-mail: predrag.kalezic@vikdg.me <br>
                     </p>
@@ -37,30 +39,43 @@
           <div id="odbor" class="tabcontent">
             <div class="row">
               <div class="col-l-12 col-xl-12 col-sm-12 col-xs-12 p-0">
+                    <div class="card">
+                          <div class="card-header">
+                          <h3>Odbor direktora</h3>   
+                            </div>
+                            <div class="card-body">
+                              <h5 class="card-title">Odbor direktora DOO „Vodovod i kanalizacija“ Danilovgrad čine 5 članova i to:</h5>
+                              <p class="card-text">
+                                  1.	Mr Goran Zeković, Predsjednik Odbora direktora<br>
+                                  2.	Vukota Stanišić, član<br>
+                                  3.	Dario Đuričković, član<br>
+                                  4.	Dražen Kalezić, član<br>
+                                  5.	Ljubomir Stajović, član
+                                  <br>
+
+                              </p>
+                            </div>
+                        </div>
+                  </div>
+                 </div>
+                </div>
+          <div id="management" class="tabcontent">
+            <div class="row">
+              <div class="col-l-12 col-xl-12 col-sm-12 col-xs-12 p-0">
                 <div class="card">
                   <div class="card-header">
-                  <h3>Odbor direktora</h3>   
+                    <h3>Menadžerski tim</h3>   
+
                     </div>
                   <div class="card-body">
-                    <h5 class="card-title">Odbor direktora DOO „Vodovod i kanalizacija“ Danilovgrad čine 5 članova i to:</h5>
-                    <p class="card-text">
-                        1.	Mr Goran Zeković, Predsjednik Odbora direktora<br>
-                        2.	Vukota Stanišić, član<br>
-                        3.	Dario Đuričković, član<br>
-                        4.	Dražen Kalezić, član<br>
-                        5.	Ljubomir Stajović, član
-                        <br>
-
-                    </p>
+                    <h5 class="card-title">U izradi</h5>
+              
                   </div>
                 </div>
               </div>
           </div>
           </div>
-
-
-        </div>
-
+      </div>
         <script>
           function openType(evt, cityName) {
             var i, tabcontent, tablinks;

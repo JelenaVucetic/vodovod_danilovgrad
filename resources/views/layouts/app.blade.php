@@ -7,8 +7,12 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>{{ config('app.name', 'Laravel') }}</title>
-
+    <title>ViK Danilovgrad | Admin Panel</title>
+    <link rel="icon" type="image/png" href="/images/VIK-DG-Logo-Color.png" />
+    <link rel="apple-touch-icon-precomposed" href="/images/VIK-DG-Logo-Color.png" type="image/png" sizes="152x152" />
+    <link rel="apple-touch-icon-precomposed" href="/images/VIK-DG-Logo-Color.png" type="image/png" sizes="120x120" />
+    <link rel="apple-touch-icon" href="/images/VIK-DG-Logo-Color.png" sizes="180x180" />
+  
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}" defer></script>
 
@@ -28,7 +32,7 @@
         <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
             <div class="container">
                 <a class="navbar-brand" href="{{ url('/') }}">
-                    {{ config('app.name', 'ViK - Danilovgrad') }}
+                  ViK - Danilovgrad
                 </a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
                     <span class="navbar-toggler-icon"></span>
