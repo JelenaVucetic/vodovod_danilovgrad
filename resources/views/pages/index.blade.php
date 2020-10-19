@@ -35,7 +35,7 @@
                                     ">  @php
                                                                 
                                             echo substr($post->body, 0, 200);
-                                        @endphp</p>
+                                        @endphp ...</p>
                             </div>
                             <div class="post-bottom">
                                 <div>
@@ -43,7 +43,7 @@
                                 </div>
                               <div class="social-desctop my-3">
                      <!-- Sharingbutton Facebook -->
-                     <a class="resp-sharing-button__link" href="https://facebook.com/sharer/sharer.php?u=https%3A%2F%2Fvikdanilovgrad.qqriq.me%2Fposts%2F{{$post->id}}" target="_blank" rel="noopener" aria-label="">
+                     <a class="resp-sharing-button__link" href="https://facebook.com/sharer/sharer.php?u=https%3A%2F%2Fvik-dg.me%2F%2Fposts%2F{{$post->id}}" target="_blank" rel="noopener" aria-label="">
                         <div class="resp-sharing-button resp-sharing-button--facebook resp-sharing-button--small"><div aria-hidden="true" class="resp-sharing-button__icon resp-sharing-button__icon--solid">
                   <img src="/images/iconfindersocial.png" alt="">     
                         </div>
@@ -51,7 +51,7 @@
                     </a>
                     
                     <!-- Sharingbutton Twitter -->
-                    <a class="resp-sharing-button__link" href="https://twitter.com/intent/tweet/?text=Share&amp;url=https%3A%2F%2Fvikdanilovgrad.qqriq.me%2Fposts%2F{{$post->id}}" target="_blank" rel="noopener" aria-label="">
+                    <a class="resp-sharing-button__link" href="https://twitter.com/intent/tweet/?text=Super%20fast%20and%20easy%20Social%20Media%20Sharing%20Buttons.%20No%20JavaScript.%20No%20tracking.&amp;url=https%3A%2F%2Fvik-dg.me%2Fposts%2F{{$post->id}}" target="_blank" rel="noopener" aria-label="">
                         <div class="resp-sharing-button resp-sharing-button--twitter resp-sharing-button--small"><div aria-hidden="true" class="resp-sharing-button__icon resp-sharing-button__icon--solid">
                             <img src="/images/iconfinder.svg" alt=""  >
                         </div>
@@ -60,12 +60,13 @@
                     <!-- Sharingbutton E-Mail -->
              
                     <button class="resp-sharing-button__link" onclick="copyToClipboard('#p1')">
-                        <p id="p1" style="display: none">https://vikdanilovgrad.qqriq.me/posts/ {{$post->id}}</p>
+                        <p id="p1" style="display: none">https://vik-dg.me/posts/ {{$post->id}}</p>
                         <div class="resp-sharing-button resp-sharing-button--email resp-sharing-button--small"><div aria-hidden="true" class="resp-sharing-button__icon resp-sharing-button__icon--solid">
                             <img src="/images/Component.svg" alt=""  >
                         </div>
                         </div>
                     </button>
+                  
                                 </div> 
                             </div>
                         </div>

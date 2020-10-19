@@ -13,7 +13,7 @@
                         <div class="hldiv">
                             <h6><a href="/">Naslovna</a></h6>
                         </div>
-                        <div class="dropdown">
+                        <div class=" hldiv dropdown">
                             <h6> <a href="#">O Nama</a></h6>
                             <div class="dropdown-content">
                                 <h6> <a href="/about">Istorijat</a></h6>
