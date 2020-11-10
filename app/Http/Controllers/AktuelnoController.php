@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use App\Aktuelno;
 use Illuminate\Http\Request;
+use App\DocumentCategories;
+
 use DB;
 use App\Post;
 

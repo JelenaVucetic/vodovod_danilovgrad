@@ -6,6 +6,8 @@ use App\Post;
 use DB;
 use Illuminate\Http\Request;
 use Intervention\Image\Facades\Image;
+use App\DocumentCategories;
+
 
 class PostController extends Controller
 {
@@ -17,8 +19,9 @@ class PostController extends Controller
     public function index()
     {
         $posts = Post::orderBy('created_at','DESC')->get();
-   
-        return view('posts.all', compact('posts'));
+        $categories = DocumentCategories::all();
+
+        return view('posts.all', compact('posts','categories'));
     }
     public function index2()
     {
@@ -107,8 +110,9 @@ class PostController extends Controller
     {
         $post = Post::findOrFail($post->id);
         $posts = Post::orderBy('created_at', 'desc')->where('id', '!=', $post->id)->offset(0)->limit(3)->get();
+        $categories = DocumentCategories::all();
 
-        return view("posts.show", compact('post', 'posts'));
+        return view("posts.show", compact('post', 'posts','categories'));
     }
 
     /**

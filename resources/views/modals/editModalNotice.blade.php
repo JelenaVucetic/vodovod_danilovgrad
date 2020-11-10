@@ -19,7 +19,23 @@
 
                         </div>
                     </div>
+                    <div class="form-group" style="display: flex;flex-direction: column;">
+                        <label class="col-sm-2 col-sm-2 control-label">Kategorija dokumenta</label>
+                        <div class="col-sm-10">
+                          <input type="text" class="form-control" name="document_categories_id" id="document_categories_id" disabled>
 
+                        </div>
+                    </div>
+                    <div class="form-group col-md-8">
+                        <label for="document_categories_id1	">Izaber kategoriju dokumenta</label>
+                        <select id="document_categories_id1	" class="form-control" name="document_categories_id1">
+                            @forelse($categories as $category)
+                                <option value={{ $category->id }} >{{ $category->title }}</option>
+                            @empty
+                                <option selected>No Locations</option>
+                            @endforelse
+                        </select>
+                    </div>
                     <div class="form-group input-group control-group col-sm-10" style="padding: 15px;">
                         <label for="pdf_file">Novi dokument</label>
                         {{ Form::file('pdf_file') }}

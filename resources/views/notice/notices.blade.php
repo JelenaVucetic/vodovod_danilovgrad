@@ -10,7 +10,7 @@
 
     <div class="col-lg-12">
       <div class="content-panel">
-        <h4 class="my-5 text-left"><i class="fa fa-angle-right mx-2"></i>Dokumentacija</h4>
+        <h4 class="my-5 text-left"><i class="fa fa-angle-right mx-2"></i>{{$category->title}}</h4>
         <section id="unseen">
           <table class="col-l-12 col-xl-12 col-sm-12 col-xs-12  table  table-hover table-condensed">
             <thead>

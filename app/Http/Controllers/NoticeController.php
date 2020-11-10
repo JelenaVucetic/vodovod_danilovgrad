@@ -6,12 +6,14 @@ use App\Notice;
 use Illuminate\Http\Request;
 use DB;
 use App\Post;
+use Validator;
+use App\DocumentCategories;
 
 class NoticeController extends Controller
 {
     public function __construct()
     {
-        $this->middleware('admin')->except(['notices','downloadN']);
+        $this->middleware('admin')->except(['notices','downloadN','show']);
     }
 
     /**
@@ -21,17 +23,18 @@ class NoticeController extends Controller
      */
     public function index()
     {
-        $notices = Notice::orderBy('created_at','DESC')->get();
-   
-        return view('notice.all', compact('notices'));
-    }
-    public function notices()
-    {
-        $posts = Post::orderBy('created_at','DESC')->get();
+        $categories = DocumentCategories::all();
 
         $notices = Notice::orderBy('created_at','DESC')->get();
    
-        return view('notice.notices', compact('notices','posts'));
+        return view('notice.all', compact('notices','categories'));
+    }
+    public function notices($id)
+    {
+        $categories = DocumentCategories::all();
+        $posts = Post::orderBy('created_at','DESC')->get();
+        $notices = Notice::orderBy('created_at','DESC')->where('document_categories_id',$id)->get();
+        return view('notice.notices', compact('notices','posts','categories'));
     }
 
     /**
@@ -41,7 +44,8 @@ class NoticeController extends Controller
      */
     public function create()
     {
-        return view("notice.create");
+        $categories = DocumentCategories::all();
+        return view("notice.create",compact('categories'));
     }
 
     /**
@@ -55,7 +59,8 @@ class NoticeController extends Controller
         $request->validate([
             'title' => 'required',
             'pdf_file' => 'required',
-         
+            'document_categories_id	' => 'required',
+
         ],
         [
             'title.required' => 'Unesite naslov obaveštenja',
@@ -74,6 +79,7 @@ class NoticeController extends Controller
        // Create Notice
        $notice = new Notice;
        $notice->title = $request->input('title');
+       $notice->document_categories_id	 = $request->input('document_categories_id	');
        $notice->pdf_file = $filename;
        $notice->save();
 
@@ -87,9 +93,13 @@ class NoticeController extends Controller
      * @param  \App\Notice  $notice
      * @return \Illuminate\Http\Response
      */
-    public function show(Notice $notice)
+    public function show($id)
     {
-        //
+        $categories = DocumentCategories::all();
+        $category = DocumentCategories::where('id',$id)->first();
+        $posts = Post::orderBy('created_at','DESC')->get();
+        $notices = Notice::orderBy('created_at','DESC')->where('document_categories_id',$id)->get();
+        return view('notice.notices', compact('notices','posts','categories','category'));
     }
 
     /**
@@ -112,13 +122,17 @@ class NoticeController extends Controller
      */
     public function update(Request $request, Notice $notice)
     {
-        $request->validate([
+
+        $validator = Validator::make($request->all(), [
             'title' => 'required',
-        ],
-        [
-            'title.required' => 'Unesite naslov obaveštenja',
+            'document_categories_id1' => 'required',
+
         ]);
-        
+        if ($validator->fails()) {
+            return redirect()->back()
+                        ->withErrors($validator)
+                        ->withInput();
+        }
         if($request->hasFile('pdf_file')) {
   
             $uniqueFileName = $request->file('pdf_file')->getClientOriginalName();
@@ -127,23 +141,22 @@ class NoticeController extends Controller
              $filePath = public_path() . '/izvestaji/';
              $file->move($filePath, $filename);
 
-             DB::table('notices')->where('id', $notice->id)->update([
-                'title' => $request->title,
-                'pdf_file' =>$filename,
-         
-            ]); 
+             $notice = Notice::find($notice->id);
+             $notice->title =  $request->get('title');
+             $notice->pdf_file = $filename;
+             $notice->document_categories_id = $request->get('document_categories_id1');
+             $notice->save();
+
       }else{
-        DB::table('notices')->where('id', $notice->id)->update([
-            'title' => $request->title,
-     
-        ]); 
+              $notice = Notice::find($notice->id);
+              $notice->title =  $request->get('title');
+              $notice->document_categories_id = $request->get('document_categories_id1');
+
+              $notice->save();
       }
 
-      
 
- 
-
-        return back()->with('success','Izveštaj je uspjeŠno azurrian!');
+        return back()->with('success','Dokument je uspjeŠno azurrian!');
     }
     
 

@@ -17,7 +17,7 @@ Route::get('/obavestenja', 'PostController@index2');
 Route::get('/', 'PagesController@index');
 Route::get('/about', 'PagesController@about');
 Route::get('/warrants-all', 'WarrantController@warrants');
-Route::get('/notices-all', 'NoticeController@notices');
+Route::get('/cnotices/{{$id}}', 'NoticeController@notices');
 Route::get('/aktuelnos-all', 'AktuelnoController@aktuelnos');
 Route::get('/management','PagesController@management');
 Route::get('/basic','PagesController@basic');

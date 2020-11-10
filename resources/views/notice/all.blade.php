@@ -56,6 +56,7 @@
                   <button type="button" class="btn btn-info" data-toggle="modal" data-target="#myModalN"
                             data-id="{{ $notice->id }}"
                             data-title="{{ $notice->title }}"
+                            data-document_categories_id="{{ $notice->document_categories_id }}"
                             data-pdf_file="{{ $notice->pdf_file }}"
                             >
                             Izmijeni

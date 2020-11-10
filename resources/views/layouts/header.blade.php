@@ -31,7 +31,14 @@
                         <div class="hldiv">
                             <h6><a href="/notices-all">Dokumentacija</a></h6>
                         </div>
-                 
+                        <div class=" hldiv dropdown">
+                            <h6> <a href="#">Dokumentacija</a></h6>
+                            <div class="dropdown-content">
+                                @foreach ($categories as $category)
+                                <h6> <a href="/notices/{{$category->id}}">{{$category->title}}</a></h6>
+                                @endforeach
+                                </div>
+                        </div>
                     </div>
                     <div class="header-right">
                         <div>

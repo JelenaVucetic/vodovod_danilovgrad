@@ -38,7 +38,16 @@
                 <label for="pdf_file" >Dodaj dokumnet</label>
                  {{Form::file('pdf_file')}}
             </div>
-    
+            <div class="form-group col-md-3">
+                <label for="document_categories_id	">Kategorija dokumenta</label>
+                <select id="document_categories_id	" class="form-control" name="document_categories_id	">
+                    @forelse($categories as $category)
+                        <option value={{ $category->id }}>{{ $category->title }}</option>
+                    @empty
+                        <option selected>No Locations</option>
+                    @endforelse
+                </select>
+            </div>
             <div class="form-group col-sm-10">
                 <button type="submit" class="btn btn-large btn-primary" style="background: #4ECDC4; border:#4ECDC4;">Dodajte dokument</button>
               </div>

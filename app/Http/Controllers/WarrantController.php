@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use App\Warrant;
 use Illuminate\Http\Request;
 use DB;
+use App\DocumentCategories;
+
 use App\Post;
 
 class WarrantController extends Controller
@@ -29,9 +31,10 @@ class WarrantController extends Controller
     }
     public function warrants()
     {        $posts = Post::orderBy('created_at','DESC')->get();
+        $categories = DocumentCategories::all();
 
         $warrants = Warrant::orderBy('created_at','DESC')->get();   
-        return view('warrant.warrants', compact('warrants','posts'));
+        return view('warrant.warrants', compact('warrants','posts','categories'));
     }
     /**
      * Show the form for creating a new resource.
