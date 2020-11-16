@@ -29,10 +29,11 @@ class AktuelnoController extends Controller
     public function aktuelnos()
     {
         $posts = Post::orderBy('created_at','DESC')->get();
+        $categories = DocumentCategories::all();
 
         $aktuelnos = Aktuelno::orderBy('created_at','DESC')->get();
    
-        return view('aktuelno.aktuelnos', compact('aktuelnos','posts'));
+        return view('aktuelno.aktuelnos', compact('aktuelnos','posts','categories'));
     }
 
     /**

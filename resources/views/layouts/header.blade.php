@@ -28,9 +28,7 @@
                         <div class="hldiv">
                             <h6><a href="/warrants-all">Putni nalozi</a></h6>
                         </div>
-                        <div class="hldiv">
-                            <h6><a href="/notices-all">Dokumentacija</a></h6>
-                        </div>
+                 
                         <div class=" hldiv dropdown">
                             <h6> <a href="#">Dokumentacija</a></h6>
                             <div class="dropdown-content">

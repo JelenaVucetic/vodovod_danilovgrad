@@ -26,8 +26,9 @@ class PostController extends Controller
     public function index2()
     {
         $posts = Post::orderBy('created_at','DESC')->get();
-   
-        return view('pages.postsAll', compact('posts'));
+        $categories = DocumentCategories::all();
+
+        return view('pages.postsAll', compact('posts','categories'));
     }
     /**
      * Show the form for creating a new resource.
