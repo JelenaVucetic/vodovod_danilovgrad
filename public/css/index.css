@@ -588,7 +588,7 @@ nav ul {
 
     nav ul {
         display: none;
-        height: 100vh;
+        height: 100%;
         margin: 0;
         padding: 80px 10px;
         text-align: center;

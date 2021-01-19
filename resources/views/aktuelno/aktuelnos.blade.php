@@ -28,8 +28,13 @@
                   {{$aktuelno->title}}</a></td>
                 
               </tr>  
-     
-            @endforeach
+              @empty
+              <tr>
+                <td>Trenutno nema aktuelnih projekata.</td>
+                 <td>
+            </td>
+              </tr>  
+              @endforelse
             </tbody>
           </table>
         </section>

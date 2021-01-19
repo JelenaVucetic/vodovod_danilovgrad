@@ -20,7 +20,7 @@
               </tr>
             </thead>
             <tbody>
-            @foreach ($warrants as $warrant)
+            @forelse ($warrants as $warrant)
               <tr>
                 <td>{{$warrant->title}}</td>
                  <td></a>
@@ -31,8 +31,13 @@
                 </a>
             </td>
               </tr>  
-     
-            @endforeach
+              @empty
+              <tr>
+                <td>Trenutno nema putnih naloga</td>
+                 <td>
+            </td>
+              </tr>  
+              @endforelse
             </tbody>
           </table>
         </section>

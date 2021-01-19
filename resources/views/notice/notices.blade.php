@@ -20,7 +20,7 @@
               </tr>
             </thead>
             <tbody>
-            @foreach ($notices as $notice)
+            @forelse ($notices as $notice)
               <tr>
                 <td>    
                   {{$notice->title}}</td>
@@ -33,8 +33,13 @@
               @endif  --}}
             </td>
               </tr>  
-     
-            @endforeach
+              @empty
+              <tr>
+                <td>Trenutno nema dokumenata</td>
+                 <td>
+            </td>
+              </tr>  
+              @endforelse
             </tbody>
           </table>
         </section>
